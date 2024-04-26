@@ -37,7 +37,7 @@
         </noscript>
          <!-- NO JS Behavior END -->
 
-        <title>Jason Yang - Regression and OLS</title>
+        <title>Jason Yang - Problem with DFSA State machines and Regex</title>
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
     </head>
 
@@ -110,88 +110,158 @@
         </div>
 
         <div id="content">
-            <h1>Regression and OLS</h1>
+            <h1>Problem with DFSA State machines and Regex</h1>
             
 
             <div class="info">
-    Posted on April 25, 2019
+    Posted on January  1, 2013
     
 </div>
 <div class="info">
     
-    Tags: <a title="All pages tagged 'mathcs'." href="../tags/mathcs.html">mathcs</a>, <a title="All pages tagged 'appliedmath'." href="../tags/appliedmath.html">appliedmath</a>, <a title="All pages tagged 'AI'." href="../tags/AI.html">AI</a>, <a title="All pages tagged 'stats'." href="../tags/stats.html">stats</a>
+    Tags: <a title="All pages tagged 'mathcs'." href="../tags/mathcs.html">mathcs</a>
     
 </div>
-<section id="intro" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Intro</h1>
-<p>Goal: Find <span class="math inline">\(\beta\)</span> weight vector that minimizes sum square residual</p>
-<p>Method:
-1. Find inflection(min/max): Solve derivative of Error wrt. weight equal to 0
-2. Prove that this is a min, not a max: Check 2nd derivative is positive definite(analogous to postive in real numbers)</p>
-</section>
-<section id="reality-vs-estimate" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Reality vs Estimate</h1>
-<p>Ideal Model of Reality
-<span class="math display">\[Y = X\beta + \epsilon\]</span></p>
-<p>Estimated Model
-<span class="math display">\[Y=X\hat{\beta} + e\]</span></p>
+<section id="dfsa-vs-ndfsa" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> DFSA vs NDFSA</h1>
 <ul>
-<li>Population analogous to Reality</li>
-<li>Sample analogous to a simulation or model of reality</li>
+<li>They are equal in power, any DFSA can be translated to NDFSA, vice versa</li>
+<li>Deterministic state machines cannot backtrack</li>
+<li>Non-deterministic state machines can backtrack</li>
 </ul>
-<p>Statistics is about using Samples(Simulation/Models/Estimations) to estimate Population(Reality)</p>
-<section id="residual-vs-error" class="level2" data-number="2.1">
-<h2 data-number="2.1"><span class="header-section-number">2.1</span> Residual vs Error</h2>
-<p><span class="math display">\[X_1 .. X_n \sim N(\mu ,\sigma^2)\]</span>
-<span class="math inline">\(X_1..X_n\)</span> each represent the choice of a random singleton subset AKA singleton sample from population.<br />
-<span class="math inline">\(\mu\)</span> is the population mean.</p>
-<p><span class="math display">\[\bar{X} = \frac{X_1 + .. X_n}{n}\]</span>
-<span class="math inline">\(\bar{X}\)</span> is sample mean. Notice it is a random variable because our choice of sample subset is random which also implies a random meam for each of these possible subsets.</p>
-<p><span class="math display">\[\bar{X} \sim N(\mu, \sigma^2)\]</span>
-<span class="math display">\[\epsilon_i = X_i - \mu\]</span>
-<span class="math display">\[ e_i = X_i - \bar{X}\]</span></p>
-<p><span class="math display">\[e \neq \epsilon\]</span></p>
-<p>Residuals <span class="math inline">\(e\)</span> are basically estimates of Error <span class="math inline">\(\epsilon\)</span></p>
+</section>
+<section id="state-machines-are-bad-at-the-fine-grained-level" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> state machines are bad at the fine-grained level</h1>
+<div class="mermaid">stateDiagram-v2
+    s1 --> s2 : +1
+    s2 --> s1 : +2</div>
+<p>In the above example, we dont keep track of what the total sum actually is.<br />
+The sum is the internal state(global context) and it is impossible to track.</p>
 <ul>
-<li><span class="math inline">\(\epsilon\)</span> is random noise of reality we typically can’t measure.
+<li>One huge issue with state machines is they do not visualize the INTERNAL state(global context) mutations/side-effect
 <ul>
-<li>Error is random error from population data.<br />
-</li>
+<li>real world applications deal with side-effects typically in the form of modifying some “global context” AND make state-transitions based on the “global context”
+<ul>
+<li>Since state machines do not visualize explicitly the global context, the state machine, more specifically state transitions must be carefully crafted with the “global context” in mind. Typically this causes a state explosion.</li>
 </ul></li>
-<li><span class="math inline">\(e\)</span> is our residual error: vertical distance of datapoint from best-fit line
-<ul>
-<li>Residual is deviation between our estimated model and sample data.</li>
 </ul></li>
 </ul>
-<blockquote>
-<p>We can <strong>ignore our Ideal Model</strong> <span class="math inline">\(\dot{Y},\dot{\beta},\epsilon\)</span> because they are simply model of an impossible ideal.</p>
-</blockquote>
 </section>
+<section id="regex" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Regex</h1>
+<p>regex are just state machines</p>
+<ul>
+<li>Regex cannot match with recursive structures
+<ul>
+<li>Parsing HTML cannot be done with standard regex</li>
+<li>Parsing source-code with indefinite number of nested brackets <code>{</code> <code>}</code> cannot be done with standard regex</li>
+</ul></li>
+</ul>
+<p>Regular languages – the languages that regular expressions can recognise – are a proper subset of context-free languages, and the written form of s-expressions is context-free but not regular. So no regular expression can recognise the written form of an s-expression.</p>
+<p>To see this consider a very tiny subset of s-expressions:</p>
+<p>n = () | ( n)</p>
+<p>So n consists of the set {(), (()), ((())), …}, where the number of left parens and right parens in each string are equal. Such a language can’t be recognised by a regular expression because you need to count parens.</p>
+<p>not really but we could make an infinitely long state machine</p>
+<div class="mermaid">stateDiagram-v2
+    s1 --> s2 : {
+    s2 --> s3e : } 
+    s2 --> s3 : {
+    s3 --> s4e : }
+    s4e --> s4ee : }
+    s3 --> s4 : {
+    s4 --> s5e : } 
+    s5e --> s5ee : }
+    s5ee --> s5eee: }
+    s4 --> .. : ...</div>
 </section>
-<section id="finding-best-fit" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Finding best fit</h1>
-<p>Regression is the best fit line that is minimizes <span class="math inline">\(e\)</span> or residual squared error.</p>
-<p><span class="math display">\[Y=X\hat{\beta} + e\]</span></p>
-<p><span class="math display">\[e=Y-X\hat{\beta}\]</span></p>
-<section id="rss-residual-sum-squared" class="level2" data-number="3.1">
-<h2 data-number="3.1"><span class="header-section-number">3.1</span> RSS: Residual Sum Squared</h2>
-<p>Sum of Squared residuals</p>
-<p><span class="math display">\[RSS(\beta) = e^t e \]</span></p>
-<p><span class="math display">\[e^Te = (Y-X\hat{\beta})^T(Y-X\hat{\beta})\]</span></p>
-<p>Set derivative to 0 to find inflection point</p>
-<p><span class="math display">\[\frac{\partial e^Te}{\partial\beta}=-2X^TY+2X^TX\hat{\beta} = 0\]</span></p>
-<p><span class="math display">\[(X^TX)\hat{\beta}=X^T Y\]</span></p>
-<p><span class="math display">\[\hat{\beta}=(X^T X)^{-1} X^T Y\]</span></p>
-<p><span class="math display">\[\hat{\beta} = (X^T X)^{-1} X^T ( X \beta + \epsilon )\]</span></p>
-<p>Show that this inflection point is minimum by proving the 2nd derivative is positive (or positive definite for matrices).</p>
-<p><span class="math display">\[\frac{\partial^2 e^Te}{\partial\beta \partial\beta^T} = 2X^T X\]</span><br />
-Assuming X has full column rank, <span class="math inline">\(X^T X\)</span> can be shown to be positive definite.</p>
+<section id="chomsky-grammar-and-regex" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Chomsky Grammar and Regex</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode txt"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Chomsky hierarchy:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>/-------------------------------------------\</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>|                                           |</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>|     Recursively enumerable languages      | Type 0</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>|                                           |</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>|   /-----------------------------------\   |</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>|   |                                   |   |</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>|   |    Context-sensitive languages    |   | Type 1</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>|   |                                   |   |</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>|   |   /---------------------------\   |   |</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>|   |   |                           |   |   |</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>|   |   |  Context-free languages   |   |   | Type 2</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>|   |   |                           |   |   |</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>|   |   |   /-------------------\   |   |   |</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>|   |   |   | Regular languages |   |   |   | Type 3</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>|   |   |   \-------------------/   |   |   |</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>|   |   \---------------------------/   |   |</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>|   \-----------------------------------/   |</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>\-------------------------------------------/</span></code></pre></div>
+<p>Example of what a grammar looks like:<br />
+<code>A -&gt; x B C</code> where x is a terminal variable<br />
+<code>Sentence -&gt; Noun Verb</code></p>
+<ul>
+<li>Level 0 - Unrestricted : Turing Machines
+<ul>
+<li>right side can be Nil</li>
+<li>ex. <code>A -&gt; Nil</code> is allowed</li>
+</ul></li>
+<li>Level 1 - Context Sensitive Lang : Linear bounded Automata
+<ul>
+<li>right side can be Nil (same restriction as level 0)</li>
+<li>Length of variables of right side must be greater than or equal Length of variables of left side</li>
+<li>ex. <code>A B C -&gt; D</code> is NOT allowed since left side <code>A B C</code> is len 3 and right side<code>D</code> is len 1</li>
+<li>ex. <code>A B -&gt; C D</code> is allowed</li>
+<li>ex. <code>A B -&gt; C D E</code> is allowed</li>
+</ul></li>
+<li>Level 2 - Context Free lang : Push down Automata
+<ul>
+<li>Same restrictions as level 1</li>
+<li>left side will only contain 1 variable
+<ul>
+<li>with the level 1 restriction, this implies right side must contain at least 1 variable and greater than or equal to number variable of left side</li>
+</ul></li>
+<li>ex. <code>A B -&gt; C D E</code> is NOT allowed</li>
+<li>ex. <code>A -&gt; Nil</code> is allowed</li>
+<li>ex. <code>A -&gt; B C</code> is allowed</li>
+<li>ex. <code>A -&gt; B</code> is allowed</li>
+</ul></li>
+<li>Level 3 - Regular Grammar : Regex, NonDeterministic Finite Automata,Deterministic Finite Automata
+<ul>
+<li>Same restriction as type 2</li>
+<li>Can only have rules of these two forms:
+<ul>
+<li><code>A -&gt; b C</code> where <code>b</code> is a terminal variable</li>
+<li><code>A -&gt; b</code> where <code>b</code> is a terminal variable</li>
+</ul></li>
+<li>ex. <code>A -&gt; a b c</code> is not allowed (lower case are terminal variables)</li>
+<li>ex. <code>A -&gt; Nil</code> is allowed</li>
+</ul></li>
+</ul>
 </section>
-<section id="covariance-matrix" class="level2" data-number="3.2">
-<h2 data-number="3.2"><span class="header-section-number">3.2</span> Covariance matrix</h2>
-<p>The <span class="math inline">\(X^T X\)</span> is the Covariance Matrix in multivariate normal distribution.</p>
-<p>$$= Cov(X,X) = (X_i - _i)(X_j-_j)</p>
-</section>
+<section id="how-is-regex-type-3" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> How is regex type 3?</h1>
+<p>Level 3 grammar, express the natural numbers</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 0</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 1</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 2</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 3</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 4</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 5</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 6</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 7</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 8</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 9</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 0N</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 1N</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 2N</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 3N</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 4N</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 5N</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 6N</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 7N</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 8N</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> <span class="at">-</span><span class="op">&gt;</span> 9N</span></code></pre></div>
+<p>Regex is a simplification and makes the above <code>[0-9]+</code></p>
 </section>
 
         </div>

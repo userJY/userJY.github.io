@@ -37,7 +37,7 @@
         </noscript>
          <!-- NO JS Behavior END -->
 
-        <title>Jason Yang - Regression and OLS</title>
+        <title>Jason Yang - Recursion + global/referenced/object/array variables</title>
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
     </head>
 
@@ -110,89 +110,68 @@
         </div>
 
         <div id="content">
-            <h1>Regression and OLS</h1>
+            <h1>Recursion + global/referenced/object/array variables</h1>
             
 
             <div class="info">
-    Posted on April 25, 2019
+    Posted on October  1, 2019
     
 </div>
 <div class="info">
     
-    Tags: <a title="All pages tagged 'mathcs'." href="../tags/mathcs.html">mathcs</a>, <a title="All pages tagged 'appliedmath'." href="../tags/appliedmath.html">appliedmath</a>, <a title="All pages tagged 'AI'." href="../tags/AI.html">AI</a>, <a title="All pages tagged 'stats'." href="../tags/stats.html">stats</a>
+    Tags: <a title="All pages tagged 'mathcs'." href="../tags/mathcs.html">mathcs</a>, <a title="All pages tagged 'recursion'." href="../tags/recursion.html">recursion</a>, <a title="All pages tagged 'prog'." href="../tags/prog.html">prog</a>
     
 </div>
-<section id="intro" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Intro</h1>
-<p>Goal: Find <span class="math inline">\(\beta\)</span> weight vector that minimizes sum square residual</p>
-<p>Method:
-1. Find inflection(min/max): Solve derivative of Error wrt. weight equal to 0
-2. Prove that this is a min, not a max: Check 2nd derivative is positive definite(analogous to postive in real numbers)</p>
-</section>
-<section id="reality-vs-estimate" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Reality vs Estimate</h1>
-<p>Ideal Model of Reality
-<span class="math display">\[Y = X\beta + \epsilon\]</span></p>
-<p>Estimated Model
-<span class="math display">\[Y=X\hat{\beta} + e\]</span></p>
 <ul>
-<li>Population analogous to Reality</li>
-<li>Sample analogous to a simulation or model of reality</li>
+<li>recursion in non-pure language is confusing because some variables are assigned by reference, particularly arrays.</li>
+<li>In recursion with global/referenced/object variables, the recursively spawned child process can manipulate the global/referenced/object variable of the parent process.</li>
 </ul>
-<p>Statistics is about using Samples(Simulation/Models/Estimations) to estimate Population(Reality)</p>
-<section id="residual-vs-error" class="level2" data-number="2.1">
-<h2 data-number="2.1"><span class="header-section-number">2.1</span> Residual vs Error</h2>
-<p><span class="math display">\[X_1 .. X_n \sim N(\mu ,\sigma^2)\]</span>
-<span class="math inline">\(X_1..X_n\)</span> each represent the choice of a random singleton subset AKA singleton sample from population.<br />
-<span class="math inline">\(\mu\)</span> is the population mean.</p>
-<p><span class="math display">\[\bar{X} = \frac{X_1 + .. X_n}{n}\]</span>
-<span class="math inline">\(\bar{X}\)</span> is sample mean. Notice it is a random variable because our choice of sample subset is random which also implies a random meam for each of these possible subsets.</p>
-<p><span class="math display">\[\bar{X} \sim N(\mu, \sigma^2)\]</span>
-<span class="math display">\[\epsilon_i = X_i - \mu\]</span>
-<span class="math display">\[ e_i = X_i - \bar{X}\]</span></p>
-<p><span class="math display">\[e \neq \epsilon\]</span></p>
-<p>Residuals <span class="math inline">\(e\)</span> are basically estimates of Error <span class="math inline">\(\epsilon\)</span></p>
-<ul>
-<li><span class="math inline">\(\epsilon\)</span> is random noise of reality we typically can’t measure.
-<ul>
-<li>Error is random error from population data.<br />
-</li>
-</ul></li>
-<li><span class="math inline">\(e\)</span> is our residual error: vertical distance of datapoint from best-fit line
-<ul>
-<li>Residual is deviation between our estimated model and sample data.</li>
-</ul></li>
-</ul>
-<blockquote>
-<p>We can <strong>ignore our Ideal Model</strong> <span class="math inline">\(\dot{Y},\dot{\beta},\epsilon\)</span> because they are simply model of an impossible ideal.</p>
-</blockquote>
-</section>
-</section>
-<section id="finding-best-fit" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Finding best fit</h1>
-<p>Regression is the best fit line that is minimizes <span class="math inline">\(e\)</span> or residual squared error.</p>
-<p><span class="math display">\[Y=X\hat{\beta} + e\]</span></p>
-<p><span class="math display">\[e=Y-X\hat{\beta}\]</span></p>
-<section id="rss-residual-sum-squared" class="level2" data-number="3.1">
-<h2 data-number="3.1"><span class="header-section-number">3.1</span> RSS: Residual Sum Squared</h2>
-<p>Sum of Squared residuals</p>
-<p><span class="math display">\[RSS(\beta) = e^t e \]</span></p>
-<p><span class="math display">\[e^Te = (Y-X\hat{\beta})^T(Y-X\hat{\beta})\]</span></p>
-<p>Set derivative to 0 to find inflection point</p>
-<p><span class="math display">\[\frac{\partial e^Te}{\partial\beta}=-2X^TY+2X^TX\hat{\beta} = 0\]</span></p>
-<p><span class="math display">\[(X^TX)\hat{\beta}=X^T Y\]</span></p>
-<p><span class="math display">\[\hat{\beta}=(X^T X)^{-1} X^T Y\]</span></p>
-<p><span class="math display">\[\hat{\beta} = (X^T X)^{-1} X^T ( X \beta + \epsilon )\]</span></p>
-<p>Show that this inflection point is minimum by proving the 2nd derivative is positive (or positive definite for matrices).</p>
-<p><span class="math display">\[\frac{\partial^2 e^Te}{\partial\beta \partial\beta^T} = 2X^T X\]</span><br />
-Assuming X has full column rank, <span class="math inline">\(X^T X\)</span> can be shown to be positive definite.</p>
-</section>
-<section id="covariance-matrix" class="level2" data-number="3.2">
-<h2 data-number="3.2"><span class="header-section-number">3.2</span> Covariance matrix</h2>
-<p>The <span class="math inline">\(X^T X\)</span> is the Covariance Matrix in multivariate normal distribution.</p>
-<p>$$= Cov(X,X) = (X_i - _i)(X_j-_j)</p>
-</section>
-</section>
+<p>A visual python version is <a href="https://pythontutor.com/render.html#code=def%20parse%28program%29%20%3A%0A%20%20%20%20%22Read%20a%20Scheme%20expression%20from%20a%20string.%22%0A%20%20%20%20return%20read_from_tokens%28program%29%0A%0Adef%20read_from_tokens%28tokens%29%20%3A%0A%20%20%20%20%22Read%20an%20expression%20from%20a%20sequence%20of%20tokens.%22%0A%20%20%20%20if%20len%28tokens%29%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20raise%20SyntaxError%28'unexpected%20EOF'%29%0A%20%20%20%20token%20%3D%20tokens.pop%280%29%0A%20%20%20%20if%20token%20%3D%3D%20'%28'%3A%0A%20%20%20%20%20%20%20%20L%20%3D%20%5B%5D%0A%20%20%20%20%20%20%20%20while%20tokens%5B0%5D%20!%3D%20'%29'%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20L.append%28read_from_tokens%28tokens%29%29%0A%20%20%20%20%20%20%20%20tokens.pop%280%29%20%23%20pop%20off%20'%29'%0A%20%20%20%20%20%20%20%20return%20L%0A%20%20%20%20elif%20token%20%3D%3D%20'%29'%3A%0A%20%20%20%20%20%20%20%20raise%20SyntaxError%28'unexpected%20%29'%29%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20atom%28token%29%0A%0Adef%20atom%28token%29%20%3A%0A%20%20%20%20%22Numbers%20become%20numbers%3B%20every%20other%20token%20is%20a%20symbol.%22%0A%20%20%20%20try%3A%20return%20int%28token%29%0A%20%20%20%20except%20ValueError%3A%0A%20%20%20%20%20%20%20%20try%3A%20return%20float%28token%29%0A%20%20%20%20%20%20%20%20except%20ValueError%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20str%28token%29%0A%0Ax%20%3D%20%5B'%28',%20'begin',%20'%28',%20'define',%20'r',%20'10',%20'%29',%20'%28',%20'*',%20'pi',%20'%28',%20'*',%20'r',%20'r',%20'%29',%20'%29',%20'%29'%5D%0Aparse%28x%29&amp;cumulative=false&amp;curInstr=31&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=311&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">python recursion with global/referenced/object variables</a></p>
+<p>In the example below the recursively spawned process manipulated the</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">//When fusing recursion with a global object</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">//the recursively spawned child can modify the parent's variable's state</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">//in this case the parent's tokens got modified</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">//tokens in many way acts like a global variable</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">mktree</span>(tokens){</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// let tokens = [...tokens1] //if you uncomment this recursion breaks because tokens is a pure array</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> partialSol <span class="op">=</span> []</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> head <span class="op">=</span> tokens<span class="op">.</span><span class="fu">shift</span>() <span class="co">//THIS pops off the tokens of the original parent process</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(head <span class="op">==</span> <span class="st">'('</span>){</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span>(tokens[<span class="dv">0</span>] <span class="op">!=</span> <span class="st">')'</span>){ </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>            <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(tokens)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>            <span class="kw">let</span> IH <span class="op">=</span> <span class="fu">mktree</span>(tokens)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            partialSol<span class="op">.</span><span class="fu">push</span>(IH)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> partialSol</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    }<span class="cf">else</span>{</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="co">// console.log(rest)</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> head</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">//When fusing recursion with a global object</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">//the recursively spawned child can modify the parent's variable's state</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">//in this case the parent's tokens got modified</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">//tokens in many way acts like a global variable</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">mktree</span>(tokens){</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> tokens <span class="op">=</span> [<span class="op">...</span>tokens1] <span class="co">//emulate a pure tokens that has no reference to the parent tokens</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> partialSol <span class="op">=</span> []</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> head <span class="op">=</span> tokens<span class="op">.</span><span class="fu">shift</span>() <span class="co">//THIS pops off the tokens of the current process</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(head <span class="op">==</span> <span class="st">'('</span>){</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span>(tokens[<span class="dv">0</span>] <span class="op">!=</span> <span class="st">')'</span>){ <span class="co">//There will be an inifinite recursion here</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>            <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(tokens)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>            <span class="kw">let</span> IH <span class="op">=</span> <span class="fu">mktree</span>(tokens)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>            partialSol<span class="op">.</span><span class="fu">push</span>(IH)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> partialSol</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    }<span class="cf">else</span>{</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="co">// console.log(rest)</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> head</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 
         </div>
         <div id="footer">

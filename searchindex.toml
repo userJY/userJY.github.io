@@ -158,6 +158,8 @@ files = [
 
 {path = "posts/Javascript/2021-10-02-Threejs.md", url = "/posts/2021-10-02-Threejs.html", title = "Threejs"},
 
+{path = "posts/Javascript/2021-10-02-Svelte.md", url = "/posts/2021-10-02-Svelte.html", title = "Svelte"},
+
 {path = "posts/Javascript/2021-10-02-StoryBook.md", url = "/posts/2021-10-02-StoryBook.html", title = "StoryBook and Rollup"},
 
 {path = "posts/Javascript/2021-10-02-ServiceWorker.md", url = "/posts/2021-10-02-ServiceWorker.html", title = "Service Worker and Web Workers"},
@@ -270,6 +272,8 @@ files = [
 
 {path = "posts/TypeTheory/2020-03-01-PatternMatch.md", url = "/posts/2020-03-01-PatternMatch.html", title = "What is Pattern matching?"},
 
+{path = "posts/TypeTheory/2020-03-01-Parser.md", url = "/posts/2020-03-01-Parser.html", title = "Parser"},
+
 {path = "posts/TypeTheory/2020-03-01-OperationalCalculus.md", url = "/posts/2020-03-01-OperationalCalculus.html", title = "Operational Calculus"},
 
 {path = "posts/TypeTheory/2020-03-01-NatDed.md", url = "/posts/2020-03-01-NatDed.html", title = "ND"},
@@ -316,6 +320,8 @@ files = [
 
 {path = "posts/Induction/2019-10-01-RecursionImagine.md", url = "/posts/2019-10-01-RecursionImagine.html", title = "Recursion Scenarios"},
 
+{path = "posts/Induction/2019-10-01-RecursionGlobalVar.md", url = "/posts/2019-10-01-RecursionGlobalVar.html", title = "Recursion + global/referenced/object/array variables"},
+
 {path = "posts/Induction/2019-10-01-InductiveAMGMDown.md", url = "/posts/2019-10-01-InductiveAMGMDown.html", title = "Proof Downward Induction AM-GM"},
 
 {path = "posts/Induction/2019-10-01-InductionNotes.md", url = "/posts/2019-10-01-InductionNotes.html", title = "List of Induction problems"},
@@ -359,6 +365,8 @@ files = [
 {path = "posts/PureMath/2019-06-02-HilbertSpace.md", url = "/posts/2019-06-02-HilbertSpace.html", title = "Hilbert Space"},
 
 {path = "posts/PureMath/2019-06-02-Condensedsets.md", url = "/posts/2019-06-02-Condensedsets.html", title = "condensed set"},
+
+{path = "posts/PureMath/2019-06-02-AlgebraicTopology.md", url = "/posts/2019-06-02-AlgebraicTopology.html", title = "Algebraic Topology"},
 
 {path = "posts/MachineLearning/2019-06-02-mathmlNotes.md", url = "/posts/2019-06-02-mathmlNotes.html", title = "Math for ML Notes"},
 
@@ -407,6 +415,8 @@ files = [
 {path = "posts/Statistics/2019-04-25-LookaheadBias.md", url = "/posts/2019-04-25-LookaheadBias.html", title = "Lookahead Bias"},
 
 {path = "posts/Statistics/2019-04-25-Kolmogorov-Smirnov.md", url = "/posts/2019-04-25-Kolmogorov-Smirnov.html", title = "Testing for normal dist with Kolmogorov-Smirnov"},
+
+{path = "posts/Statistics/2019-04-25-CentralLimit.md", url = "/posts/2019-04-25-CentralLimit.html", title = "Central Limit Theorem"},
 
 {path = "posts/Probability/2019-04-02-QuickStatsA.md", url = "/posts/2019-04-02-QuickStatsA.html", title = "Quick Stats Part 1"},
 
@@ -520,6 +530,8 @@ files = [
 
 {path = "posts/CyberSec/2015-02-01-pyFTP.md", url = "/posts/2015-02-01-pyFTP.html", title = "python FTP SMTP POP3 IMAP DNS"},
 
+{path = "posts/CyberSec/2015-02-01-flashingOpenIPC.md", url = "/posts/2015-02-01-flashingOpenIPC.html", title = "Flashing OpenIPC camera"},
+
 {path = "posts/CyberSec/2015-02-01-SettingUpHyperV.md", url = "/posts/2015-02-01-SettingUpHyperV.html", title = "HyperV on a home server"},
 
 {path = "posts/CyberSec/2015-02-01-SFTPtransfer.md", url = "/posts/2015-02-01-SFTPtransfer.html", title = "Transfer files SFTP"},
@@ -532,11 +544,15 @@ files = [
 
 {path = "posts/CyberSec/2015-02-01-PenTest.md", url = "/posts/2015-02-01-PenTest.html", title = "Pen Testing"},
 
+{path = "posts/CyberSec/2015-02-01-OpenWrtPentest.md", url = "/posts/2015-02-01-OpenWrtPentest.html", title = "Pen Testing OpenWrt"},
+
 {path = "posts/CyberSec/2015-02-01-MonitorPhonePacket.md", url = "/posts/2015-02-01-MonitorPhonePacket.html", title = "Monitor Phone Packets"},
 
 {path = "posts/CyberSec/2015-02-01-LinuxScripts.md", url = "/posts/2015-02-01-LinuxScripts.html", title = "Linux annoying setup commands"},
 
 {path = "posts/CyberSec/2015-02-01-HyperVExpand.md", url = "/posts/2015-02-01-HyperVExpand.html", title = "HyperV Expand win 10 VM virtual hard drive space"},
+
+{path = "posts/CyberSec/2015-02-01-FormattingSDcard.md", url = "/posts/2015-02-01-FormattingSDcard.html", title = "Formatting SDcard"},
 
 {path = "posts/CyberSec/2015-02-01-CyberSec.md", url = "/posts/2015-02-01-CyberSec.html", title = "Misc CyberSecurity"},
 
@@ -608,6 +624,8 @@ files = [
 
 {path = "posts/Algorithms/2013-01-01-ProofBFS.md", url = "/posts/2013-01-01-ProofBFS.html", title = "Proof - BFS gets shortest distance"},
 
+{path = "posts/Algorithms/2013-01-01-ProblemStateMachine.md", url = "/posts/2013-01-01-ProblemStateMachine.html", title = "Problem with DFSA State machines and Regex"},
+
 {path = "posts/Algorithms/2013-01-01-IO.md", url = "/posts/2013-01-01-IO.html", title = "Competitive file IO"},
 
 {path = "posts/Algorithms/2013-01-01-GreedyAlgo.md", url = "/posts/2013-01-01-GreedyAlgo.html", title = "Proof - Greedy Algo"},
@@ -662,9 +680,13 @@ files = [
 
 {path = "posts/Misc/2012-10-02-OpenWrtWho.md", url = "/posts/2012-10-02-OpenWrtWho.html", title = "OpenWrt Check who is connected"},
 
+{path = "posts/Misc/2012-10-02-OpenWrt.md", url = "/posts/2012-10-02-OpenWrt.html", title = "OpenWrt - Setup"},
+
+{path = "posts/Misc/2012-10-02-OpenVpn.md", url = "/posts/2012-10-02-OpenVpn.html", title = "OpenVPN and certificates"},
+
 {path = "posts/Misc/2012-10-02-MusicTheory.md", url = "/posts/2012-10-02-MusicTheory.html", title = "Music Theory"},
 
-{path = "posts/Misc/2012-10-02-MeshOpenWrt.md", url = "/posts/2012-10-02-MeshOpenWrt.html", title = "Mesh OpenWrt from scratch"},
+{path = "posts/Misc/2012-10-02-MeshOpenWrt.md", url = "/posts/2012-10-02-MeshOpenWrt.html", title = "OpenWrt - Mesh"},
 
 {path = "posts/Misc/2012-10-02-MarkdownStyles.md", url = "/posts/2012-10-02-MarkdownStyles.html", title = "Markdown Styling"},
 
@@ -683,6 +705,8 @@ files = [
 {path = "posts/Misc/2012-10-02-House/2012-10-02-House.md", url = "/posts/2012-10-02-House.html", title = "Property Construction House"},
 
 {path = "posts/Misc/2012-10-02-HostApd.md", url = "/posts/2012-10-02-HostApd.html", title = "hostapd access point"},
+
+{path = "posts/Misc/2012-10-02-HomeWiringMistake.md", url = "/posts/2012-10-02-HomeWiringMistake.html", title = "Home Wiring Rookie mistake"},
 
 {path = "posts/Misc/2012-10-02-HakyllStorkSearch.md", url = "/posts/2012-10-02-HakyllStorkSearch.html", title = "Hakyll stork search"},
 

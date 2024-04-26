@@ -175,6 +175,122 @@
 <p>from router</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./sendfile</span></span></code></pre></div>
 </section>
+<section id="scripts" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Scripts</h1>
+<section id="sizelimit-sends-to-tftp-server" class="level2" data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span> Sizelimit sends to tftp server</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/sh</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="va">SERVER_IP</span><span class="op">=</span><span class="st">&quot;192.168.1.243&quot;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="va">THEFILE</span><span class="op">=</span><span class="st">&quot;capfile.pcap&quot;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="va">PHONE_IP</span><span class="op">=</span><span class="st">&quot;192.168.1.101&quot;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="va">INTERFACE</span><span class="op">=</span><span class="st">&quot;igb1&quot;</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="va">CLIENTDIR</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/phonePCAP&quot;</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="va">SIZELIM</span><span class="op">=</span>3 <span class="co">#in bytes; 1000000 byte is 1MB</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="va">DUMPLIM</span><span class="op">=</span><span class="st">&quot;10B&quot;</span> <span class="co">#ideally less than file sizelim</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="va">$(</span><span class="fu">stat</span> <span class="at">-f%z</span> <span class="st">&quot;</span><span class="va">$CLIENTDIR</span><span class="st">/</span><span class="va">$THEFILE</span><span class="st">&quot;</span><span class="va">)</span> <span class="ot">-gt</span> <span class="va">$SIZELIM</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$THEFILE</span><span class="st"> file exists and is greater than </span><span class="va">$SIZELIM</span><span class="st">&quot;</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Using tftp to put the CA file to server 192.168.1.243</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">(</span> <span class="bu">echo</span> put <span class="st">&quot;</span><span class="va">$CLIENTDIR</span><span class="st">/</span><span class="va">$THEFILE</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="va">$THEFILE</span><span class="st">&quot;</span> <span class="kw">)</span> <span class="kw">|</span> <span class="ex">tftp</span> <span class="va">$SERVER_IP</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check if tftp put completed successfully</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;File transfer completed successfully.&quot;</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Empty the CA file</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">truncate</span> <span class="at">-s</span> 0 <span class="st">&quot;</span><span class="va">$CLIENTDIR</span><span class="st">/</span><span class="va">$THEFILE</span><span class="st">&quot;</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Start tcpdump</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    <span class="ex">tcpdump</span> <span class="at">-i</span> <span class="va">$INTERFACE</span> host <span class="va">$PHONE_IP</span> <span class="at">-C</span> <span class="va">$DUMPLIM</span> <span class="at">-w</span> <span class="st">&quot;</span><span class="va">$CLIENTDIR</span><span class="st">/</span><span class="va">$THEFILE</span><span class="st">&quot;</span> </span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Store the PID of tcpdump process</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="va">$!</span> <span class="op">&gt;</span> /var/run/tcpdump.pid</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$THEFILE</span><span class="st"> file either does not exist or is not greater than </span><span class="va">$SIZELIM</span><span class="st">&quot;</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
+</section>
+<section id="duration-sends-to-tftp-server" class="level2" data-number="3.2">
+<h2 data-number="3.2"><span class="header-section-number">3.2</span> Duration sends to tftp server</h2>
+<ul>
+<li><code>igb0</code> is the igb for your LAN network</li>
+</ul>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/sh</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="va">SERVER_IP</span><span class="op">=</span><span class="st">&quot;192.168.1.243&quot;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="va">THEFILE</span><span class="op">=</span><span class="st">&quot;capfile.pcap&quot;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="va">PHONE_IP</span><span class="op">=</span><span class="st">&quot;192.168.1.101&quot;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="va">INTERFACE</span><span class="op">=</span><span class="st">&quot;igb0&quot;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="va">MYHOME</span><span class="op">=</span><span class="st">&quot;/root&quot;</span> <span class="co">#rc.d service runs as its own user so it wont always be $HOME</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="va">CLIENTDIR</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$MYHOME</span><span class="st">/phonePCAP&quot;</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">#SIZELIM=3 #in bytes; 1000000 byte is 1MB</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co">#DUMPLIM=&quot;10B&quot; #ideally less than file sizelim</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="va">DURATION</span><span class="op">=</span><span class="st">&quot;1800s&quot;</span> <span class="co">#in seconds</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pkill</span> <span class="at">-f</span> tcpdump</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Using tftp to put the CA file to server 192.168.1.243</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">(</span> <span class="bu">echo</span> put <span class="st">&quot;</span><span class="va">$CLIENTDIR</span><span class="st">/</span><span class="va">$THEFILE</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="va">$THEFILE</span><span class="st">&quot;</span> <span class="kw">)</span> <span class="kw">|</span> <span class="ex">tftp</span> <span class="va">$SERVER_IP</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;File transfer completed successfully.&quot;</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Empty the CA file</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">truncate</span> <span class="at">-s</span> 0 <span class="st">&quot;</span><span class="va">$CLIENTDIR</span><span class="st">/</span><span class="va">$THEFILE</span><span class="st">&quot;</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Start tcpdump</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    <span class="ex">timeout</span> <span class="va">$DURATION</span> tcpdump <span class="at">-i</span> <span class="va">$INTERFACE</span> host <span class="va">$PHONE_IP</span> <span class="at">-W</span> 1 <span class="at">-w</span> <span class="st">&quot;</span><span class="va">$CLIENTDIR</span><span class="st">/</span><span class="va">$THEFILE</span><span class="st">&quot;</span> <span class="at">-q</span> </span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Store the PID of tcpdump process</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="va">$!</span> <span class="op">&gt;</span> /var/run/tcpdump.pid</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+<div class="sourceCode" id="cb11" data-filename="/usr/local/etc/rc.d/monPhoneService"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/sh</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># PROVIDE: monPhoneService</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># REQUIRE: LOGIN</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co"># KEYWORD: monPhone</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span> /etc/rc.subr</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="va">name</span><span class="op">=</span><span class="st">&quot;monPhoneService&quot;</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="va">rcvar</span><span class="op">=</span><span class="st">&quot;monPhoneService_enable&quot;</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Adjust the path to your script</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="va">command</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/phonePCAP/monPhone&quot;</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="va">pidfile</span><span class="op">=</span><span class="st">&quot;/var/run/</span><span class="va">${name}</span><span class="st">.pid&quot;</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="va">start_cmd</span><span class="op">=</span><span class="st">&quot;</span><span class="va">${name}</span><span class="st">_start&quot;</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="va">stop_cmd</span><span class="op">=</span><span class="st">&quot;</span><span class="va">${name}</span><span class="st">_stop&quot;</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="va">restart_cmd</span><span class="op">=</span><span class="st">&quot;</span><span class="va">${name}</span><span class="st">_restart&quot;</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="fu">monPhoneService_start()</span> <span class="kw">{</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Starting </span><span class="va">${name}</span><span class="st">.&quot;</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>    <span class="ex">/bin/sh</span> <span class="va">${command}</span> <span class="kw">&amp;</span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="va">$!</span> <span class="op">&gt;</span> <span class="va">${pidfile}</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="fu">monPhoneService_stop()</span> <span class="kw">{</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Stopping </span><span class="va">${name}</span><span class="st">.&quot;</span></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>    <span class="bu">kill</span> <span class="kw">`</span><span class="fu">cat</span> <span class="va">${pidfile}</span><span class="kw">`</span></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rm</span> <span class="at">-f</span> <span class="va">${pidfile}</span></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a><span class="fu">monPhoneService_restart()</span> <span class="kw">{</span></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>    <span class="va">${name}</span><span class="ex">_stop</span></span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>    <span class="va">${name}</span><span class="ex">_start</span></span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a><span class="ex">load_rc_config</span> <span class="va">$name</span></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a><span class="ex">run_rc_command</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sysrc</span> monPhoneService_enable=<span class="st">&quot;YES&quot;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">service</span> monPhoneService start</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">service</span> <span class="at">-e</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#show service enabled</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ex">service</span> <span class="at">-l</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#show service running</span></span></code></pre></div>
+</section>
+</section>
 
         </div>
         <div id="footer">

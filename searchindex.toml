@@ -2,8 +2,6 @@
 
 files = [
 
-{path = "posts/Cloudflare/2023-01-01-workers.md", url = "/posts/2023-01-01-workers.html", title = "Cloudflare"},
-
 {path = "posts/QuickCode/2022-09-02-pyplot.md", url = "/posts/2022-09-02-pyplot.html", title = "Pyplot matplotlib"},
 
 {path = "posts/QuickCode/2022-09-02-pandas.md", url = "/posts/2022-09-02-pandas.html", title = "Pandas"},
@@ -147,6 +145,10 @@ files = [
 {path = "posts/Softdev/2022-02-02-DataDrivenDesign.md", url = "/posts/2022-02-02-DataDrivenDesign.html", title = "Data Driven Design Notes"},
 
 {path = "posts/Softdev/2022-02-02-Agile.md", url = "/posts/2022-02-02-Agile.html", title = "Agile"},
+
+{path = "posts/Cloudflare/2022-01-01-workers.md", url = "/posts/2022-01-01-workers.html", title = "Cloudflare"},
+
+{path = "posts/Cloudflare/2022-01-01-DNSR2.md", url = "/posts/2022-01-01-DNSR2.html", title = "Cloudflare R2"},
 
 {path = "posts/2021-10-15-3dplots/2021-10-15-3dplots.md", url = "/posts/2021-10-15-3dplots.html", title = "3d plots and Contour plot"},
 
@@ -551,6 +553,8 @@ files = [
 {path = "posts/CyberSec/2015-02-01-LinuxScripts.md", url = "/posts/2015-02-01-LinuxScripts.html", title = "Linux annoying setup commands"},
 
 {path = "posts/CyberSec/2015-02-01-HyperVExpand.md", url = "/posts/2015-02-01-HyperVExpand.html", title = "HyperV Expand win 10 VM virtual hard drive space"},
+
+{path = "posts/CyberSec/2015-02-01-Hash.md", url = "/posts/2015-02-01-Hash.html", title = "Hashing"},
 
 {path = "posts/CyberSec/2015-02-01-FormattingSDcard.md", url = "/posts/2015-02-01-FormattingSDcard.html", title = "Formatting SDcard"},
 

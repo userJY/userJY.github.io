@@ -14,28 +14,105 @@
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-pyplot.html</loc>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-Callcc.html</loc>
     <lastmod>September  2, 2022</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-pandas.html</loc>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-LitReview.html</loc>
     <lastmod>September  2, 2022</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-makefile.html</loc>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-QuickMatlab.html</loc>
     <lastmod>September  2, 2022</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-example.html</loc>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-QuickMathematicaPre.html</loc>
+    <lastmod>September  2, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-QuickMathematica2.html</loc>
+    <lastmod>September  2, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-QuickMathematica.html</loc>
+    <lastmod>September  2, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-SVG.html</loc>
+    <lastmod>September  2, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-NextGithubpages.html</loc>
+    <lastmod>September  2, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-GithubAction.html</loc>
+    <lastmod>September  2, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-GithubAPI.html</loc>
+    <lastmod>September  2, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-GitCrashCourse.html</loc>
+    <lastmod>September  2, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-CSSFlexbox.html</loc>
+    <lastmod>September  2, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-CSS.html</loc>
+    <lastmod>September  2, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-Bootstrap.html</loc>
+    <lastmod>September  2, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-BlockChain.html</loc>
     <lastmod>September  2, 2022</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -49,7 +126,21 @@
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-SVG.html</loc>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-HaskellSnips.html</loc>
+    <lastmod>September  2, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-pyplot.html</loc>
+    <lastmod>September  2, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-pandas.html</loc>
     <lastmod>September  2, 2022</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -113,34 +204,6 @@
 
   <url>
     <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-QuickMicro.html</loc>
-    <lastmod>September  2, 2022</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-QuickMatlab.html</loc>
-    <lastmod>September  2, 2022</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-QuickMathematicaPre.html</loc>
-    <lastmod>September  2, 2022</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-QuickMathematica2.html</loc>
-    <lastmod>September  2, 2022</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-QuickMathematica.html</loc>
     <lastmod>September  2, 2022</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -224,56 +287,7 @@
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-NextGithubpages.html</loc>
-    <lastmod>September  2, 2022</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-NQueen.html</loc>
-    <lastmod>September  2, 2022</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-LitReview.html</loc>
-    <lastmod>September  2, 2022</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-HaskellSnips.html</loc>
-    <lastmod>September  2, 2022</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-GoSnips.html</loc>
-    <lastmod>September  2, 2022</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-GithubAction.html</loc>
-    <lastmod>September  2, 2022</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-GithubAPI.html</loc>
-    <lastmod>September  2, 2022</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-GitCrashCourse.html</loc>
     <lastmod>September  2, 2022</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -287,27 +301,6 @@
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-Callcc.html</loc>
-    <lastmod>September  2, 2022</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-CSSFlexbox.html</loc>
-    <lastmod>September  2, 2022</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-CSS.html</loc>
-    <lastmod>September  2, 2022</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-CPython.html</loc>
     <lastmod>September  2, 2022</lastmod>
     <changefreq>weekly</changefreq>
@@ -315,14 +308,14 @@
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-Bootstrap.html</loc>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-makefile.html</loc>
     <lastmod>September  2, 2022</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-BlockChain.html</loc>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-NQueen.html</loc>
     <lastmod>September  2, 2022</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -387,6 +380,34 @@
   <url>
     <loc>https://lambdaJasonYang.github.io/posts/2022-06-02-Dapr.html</loc>
     <lastmod>June  2, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-04-09-TFTP.html</loc>
+    <lastmod>April  9, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-04-09-WebGL.html</loc>
+    <lastmod>April  9, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-04-03-UnrealEngine2.html</loc>
+    <lastmod>April  3, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-04-03-UnrealEngine.html</loc>
+    <lastmod>April  3, 2022</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -527,6 +548,34 @@
   <url>
     <loc>https://lambdaJasonYang.github.io/posts/2022-01-01-DNSR2.html</loc>
     <lastmod>January  1, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2021-11-15-GoogleAnalytics.html</loc>
+    <lastmod>November 15, 2021</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2021-11-11-HaskellTips.html</loc>
+    <lastmod>November 11, 2021</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2021-11-10-BigDataPlots.html</loc>
+    <lastmod>November 10, 2021</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2021-11-10-Authentication.html</loc>
+    <lastmod>November 10, 2021</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -877,6 +926,48 @@
   <url>
     <loc>https://lambdaJasonYang.github.io/posts/2021-10-01-WebComponents.html</loc>
     <lastmod>October  1, 2021</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2021-09-21-Bookmarks.html</loc>
+    <lastmod>September 21, 2021</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2021-08-25-RequestHeader.html</loc>
+    <lastmod>August 25, 2021</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2021-08-25-HttpTut.html</loc>
+    <lastmod>August 25, 2021</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2021-08-25-Alexa.html</loc>
+    <lastmod>August 25, 2021</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2021-08-10-PvNP.html</loc>
+    <lastmod>August 10, 2021</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2021-08-10-trace.html</loc>
+    <lastmod>August 10, 2021</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1589,13 +1680,6 @@
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2019-02-02-RNA.html</loc>
-    <lastmod>February  2, 2019</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://lambdaJasonYang.github.io/posts/2019-02-02-PenrosePhysics.html</loc>
     <lastmod>February  2, 2019</lastmod>
     <changefreq>weekly</changefreq>
@@ -1646,6 +1730,13 @@
 
   <url>
     <loc>https://lambdaJasonYang.github.io/posts/2019-02-02-Circuits.html</loc>
+    <lastmod>February  2, 2019</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2019-02-02-RNA.html</loc>
     <lastmod>February  2, 2019</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1869,28 +1960,7 @@
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2015-02-01-flashingOpenIPC.html</loc>
-    <lastmod>February  1, 2015</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2015-02-01-SettingUpHyperV.html</loc>
-    <lastmod>February  1, 2015</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://lambdaJasonYang.github.io/posts/2015-02-01-SFTPtransfer.html</loc>
-    <lastmod>February  1, 2015</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2015-02-01-RemoteSoundToPhone.html</loc>
     <lastmod>February  1, 2015</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1918,28 +1988,7 @@
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2015-02-01-OpenWrtPentest.html</loc>
-    <lastmod>February  1, 2015</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2015-02-01-MonitorPhonePacket.html</loc>
-    <lastmod>February  1, 2015</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://lambdaJasonYang.github.io/posts/2015-02-01-LinuxScripts.html</loc>
-    <lastmod>February  1, 2015</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2015-02-01-HyperVExpand.html</loc>
     <lastmod>February  1, 2015</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1968,6 +2017,48 @@
 
   <url>
     <loc>https://lambdaJasonYang.github.io/posts/2015-02-01-AndroidBash.html</loc>
+    <lastmod>February  1, 2015</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2015-02-01-flashingOpenIPC.html</loc>
+    <lastmod>February  1, 2015</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2015-02-01-SettingUpHyperV.html</loc>
+    <lastmod>February  1, 2015</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2015-02-01-RemoteSoundToPhone.html</loc>
+    <lastmod>February  1, 2015</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2015-02-01-OpenWrtPentest.html</loc>
+    <lastmod>February  1, 2015</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2015-02-01-MonitorPhonePacket.html</loc>
+    <lastmod>February  1, 2015</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2015-02-01-HyperVExpand.html</loc>
     <lastmod>February  1, 2015</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -2268,6 +2359,90 @@
   </url>
 
   <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-Shipping.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-Sewing.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-Screens.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-RandTips.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-Psychology.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-PropertyLoans.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-Politics.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-MusicTheory.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-Kant.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-House.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-HomeWiringMistake.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-Bread.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-ncat.html</loc>
     <lastmod>October  2, 2012</lastmod>
     <changefreq>weekly</changefreq>
@@ -2303,20 +2478,6 @@
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-Shipping.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-Sewing.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-SetupCoq.html</loc>
     <lastmod>October  2, 2012</lastmod>
     <changefreq>weekly</changefreq>
@@ -2324,56 +2485,7 @@
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-Screens.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-RedHatEnv.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-RandTips.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-RailroadSyntax.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-QEMUrhel.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-Psychology.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-PropertyLoans.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-Politics.html</loc>
     <lastmod>October  2, 2012</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -2388,41 +2500,6 @@
 
   <url>
     <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-PandocFiltering.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-OpenWrtWho.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-OpenWrt.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-OpenVpn.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-MusicTheory.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-MeshOpenWrt.html</loc>
     <lastmod>October  2, 2012</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -2457,42 +2534,7 @@
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-KyoceraPrinters.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-Kant.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-InstallWifiDongle.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-House.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-HostApd.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-HomeWiringMistake.html</loc>
     <lastmod>October  2, 2012</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -2555,6 +2597,69 @@
   </url>
 
   <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-CodeServer.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-RedHatEnv.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-QEMUrhel.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-OpenWrtWho.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-OpenWrt.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-OpenVpn.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-MeshOpenWrt.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-KyoceraPrinters.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-InstallWifiDongle.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-GuideToChoosingRouters.html</loc>
     <lastmod>October  2, 2012</lastmod>
     <changefreq>weekly</changefreq>
@@ -2577,20 +2682,6 @@
 
   <url>
     <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-Ender3Pro.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-CodeServer.html</loc>
-    <lastmod>October  2, 2012</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-Bread.html</loc>
     <lastmod>October  2, 2012</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

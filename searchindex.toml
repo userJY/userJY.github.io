@@ -2,113 +2,119 @@
 
 files = [
 
-{path = "posts/QuickCode/2022-09-02-pyplot.md", url = "/posts/2022-09-02-pyplot.html", title = "Pyplot matplotlib"},
+{path = "posts/TypeTheory/2022-09-02-Callcc.md", url = "/posts/2022-09-02-Callcc.html", title = "Visualize Callcc"},
 
-{path = "posts/QuickCode/2022-09-02-pandas.md", url = "/posts/2022-09-02-pandas.html", title = "Pandas"},
+{path = "posts/Statistics/2022-09-02-LitReview.md", url = "/posts/2022-09-02-LitReview.html", title = "Literature review"},
 
-{path = "posts/QuickCode/2022-09-02-makefile.md", url = "/posts/2022-09-02-makefile.html", title = "makefile"},
+{path = "posts/Mathematica/2022-09-02-QuickMatlab.md", url = "/posts/2022-09-02-QuickMatlab.html", title = "Quick Matlab"},
 
-{path = "posts/QuickCode/2022-09-02-example.md", url = "/posts/2022-09-02-example.html", title = "example page"},
+{path = "posts/Mathematica/2022-09-02-QuickMathematicaPre.md", url = "/posts/2022-09-02-QuickMathematicaPre.html", title = "Quick Mathematica Utils"},
 
-{path = "posts/QuickCode/2022-09-02-TLA.md", url = "/posts/2022-09-02-TLA.html", title = "TLA"},
+{path = "posts/Mathematica/2022-09-02-QuickMathematica2.md", url = "/posts/2022-09-02-QuickMathematica2.html", title = "Quick Mathematica Graphs"},
 
-{path = "posts/QuickCode/2022-09-02-SVG.md", url = "/posts/2022-09-02-SVG.html", title = "SVG"},
+{path = "posts/Mathematica/2022-09-02-QuickMathematica.md", url = "/posts/2022-09-02-QuickMathematica.html", title = "Quick Mathematica"},
 
-{path = "posts/QuickCode/2022-09-02-Rosetta2.md", url = "/posts/2022-09-02-Rosetta2.html", title = "Rosetta 2"},
+{path = "posts/Javascript/2022-09-02-SVG.md", url = "/posts/2022-09-02-SVG.html", title = "SVG"},
 
-{path = "posts/QuickCode/2022-09-02-Rosetta1.md", url = "/posts/2022-09-02-Rosetta1.html", title = "Rosetta 1"},
+{path = "posts/Javascript/2022-09-02-NextGithubpages.md", url = "/posts/2022-09-02-NextGithubpages.html", title = "Autobuild Nextjs github pages"},
 
-{path = "posts/QuickCode/2022-09-02-QuirkyPythonTraps.md", url = "/posts/2022-09-02-QuirkyPythonTraps.html", title = "Quirky Python Traps"},
+{path = "posts/Javascript/2022-09-02-GithubAction.md", url = "/posts/2022-09-02-GithubAction.html", title = "CI/CD in GithubAction"},
 
-{path = "posts/QuickCode/2022-09-02-QuickSetup.md", url = "/posts/2022-09-02-QuickSetup.html", title = "Quick Setup"},
+{path = "posts/Javascript/2022-09-02-GithubAPI.md", url = "/posts/2022-09-02-GithubAPI.html", title = "Calling Github APIs"},
 
-{path = "posts/QuickCode/2022-09-02-QuickRust.md", url = "/posts/2022-09-02-QuickRust.html", title = "Quick Rust"},
+{path = "posts/Javascript/2022-09-02-GitCrashCourse.md", url = "/posts/2022-09-02-GitCrashCourse.html", title = "Git Crashcourse"},
 
-{path = "posts/QuickCode/2022-09-02-QuickRedis.md", url = "/posts/2022-09-02-QuickRedis.html", title = "Quick Redis"},
+{path = "posts/Javascript/2022-09-02-CSSFlexbox.md", url = "/posts/2022-09-02-CSSFlexbox.html", title = "CSS Flexbox Grid"},
 
-{path = "posts/QuickCode/2022-09-02-QuickR.md", url = "/posts/2022-09-02-QuickR.html", title = "Quick R"},
+{path = "posts/Javascript/2022-09-02-CSS.md", url = "/posts/2022-09-02-CSS.html", title = "CSS"},
 
-{path = "posts/QuickCode/2022-09-02-QuickProtoBuf.md", url = "/posts/2022-09-02-QuickProtoBuf.html", title = "Quick ProtoBuf"},
+{path = "posts/Javascript/2022-09-02-Bootstrap.md", url = "/posts/2022-09-02-Bootstrap.html", title = "Bootstrap"},
 
-{path = "posts/QuickCode/2022-09-02-QuickMicro.md", url = "/posts/2022-09-02-QuickMicro.html", title = "Quick Microservice"},
+{path = "posts/Hacksoft/2022-09-02-BlockChain.md", url = "/posts/2022-09-02-BlockChain.html", title = "Blockchain"},
 
-{path = "posts/QuickCode/2022-09-02-QuickMatlab.md", url = "/posts/2022-09-02-QuickMatlab.html", title = "Quick Matlab"},
+{path = "posts/Functional/2022-09-02-TLA.md", url = "/posts/2022-09-02-TLA.html", title = "TLA"},
 
-{path = "posts/QuickCode/2022-09-02-QuickMathematicaPre.md", url = "/posts/2022-09-02-QuickMathematicaPre.html", title = "Quick Mathematica Utils"},
+{path = "posts/Functional/2022-09-02-HaskellSnips.md", url = "/posts/2022-09-02-HaskellSnips.html", title = "Haskell snippets"},
 
-{path = "posts/QuickCode/2022-09-02-QuickMathematica2.md", url = "/posts/2022-09-02-QuickMathematica2.html", title = "Quick Mathematica Graphs"},
+{path = "posts/CodeEtc/2022-09-02-pyplot.md", url = "/posts/2022-09-02-pyplot.html", title = "Pyplot matplotlib"},
 
-{path = "posts/QuickCode/2022-09-02-QuickMathematica.md", url = "/posts/2022-09-02-QuickMathematica.html", title = "Quick Mathematica"},
+{path = "posts/CodeEtc/2022-09-02-pandas.md", url = "/posts/2022-09-02-pandas.html", title = "Pandas"},
 
-{path = "posts/QuickCode/2022-09-02-QuickMQTT.md", url = "/posts/2022-09-02-QuickMQTT.html", title = "Quick MQTT"},
+{path = "posts/CodeEtc/2022-09-02-Rosetta2.md", url = "/posts/2022-09-02-Rosetta2.html", title = "Rosetta 2"},
 
-{path = "posts/QuickCode/2022-09-02-QuickGraphQL.md", url = "/posts/2022-09-02-QuickGraphQL.html", title = "Quick GraphQL"},
+{path = "posts/CodeEtc/2022-09-02-Rosetta1.md", url = "/posts/2022-09-02-Rosetta1.html", title = "Rosetta 1"},
 
-{path = "posts/QuickCode/2022-09-02-QuickGoTool.md", url = "/posts/2022-09-02-QuickGoTool.html", title = "Quick Golang Tooling"},
+{path = "posts/CodeEtc/2022-09-02-QuirkyPythonTraps.md", url = "/posts/2022-09-02-QuirkyPythonTraps.html", title = "Quirky Python Traps"},
 
-{path = "posts/QuickCode/2022-09-02-QuickGoPre.md", url = "/posts/2022-09-02-QuickGoPre.html", title = "Quick Golang 0"},
+{path = "posts/CodeEtc/2022-09-02-QuickSetup.md", url = "/posts/2022-09-02-QuickSetup.html", title = "Quick Setup"},
 
-{path = "posts/QuickCode/2022-09-02-QuickGo.md", url = "/posts/2022-09-02-QuickGo.html", title = "Quick Golang 1"},
+{path = "posts/CodeEtc/2022-09-02-QuickRust.md", url = "/posts/2022-09-02-QuickRust.html", title = "Quick Rust"},
 
-{path = "posts/QuickCode/2022-09-02-QuickErlang.md", url = "/posts/2022-09-02-QuickErlang.html", title = "Quick Erlang"},
+{path = "posts/CodeEtc/2022-09-02-QuickRedis.md", url = "/posts/2022-09-02-QuickRedis.html", title = "Quick Redis"},
 
-{path = "posts/QuickCode/2022-09-02-QuickASP.md", url = "/posts/2022-09-02-QuickASP.html", title = "Quick ASP"},
+{path = "posts/CodeEtc/2022-09-02-QuickR.md", url = "/posts/2022-09-02-QuickR.html", title = "Quick R"},
 
-{path = "posts/QuickCode/2022-09-02-PythonSnips.md", url = "/posts/2022-09-02-PythonSnips.html", title = "Python Snippets"},
+{path = "posts/CodeEtc/2022-09-02-QuickProtoBuf.md", url = "/posts/2022-09-02-QuickProtoBuf.html", title = "Quick ProtoBuf"},
 
-{path = "posts/QuickCode/2022-09-02-PythonFrameScope.md", url = "/posts/2022-09-02-PythonFrameScope.html", title = "Frames Scope and Python"},
+{path = "posts/CodeEtc/2022-09-02-QuickMicro.md", url = "/posts/2022-09-02-QuickMicro.html", title = "Quick Microservice"},
 
-{path = "posts/QuickCode/2022-09-02-PythonDeepCopy.md", url = "/posts/2022-09-02-PythonDeepCopy.html", title = "Shallow vs Deep copy"},
+{path = "posts/CodeEtc/2022-09-02-QuickMQTT.md", url = "/posts/2022-09-02-QuickMQTT.html", title = "Quick MQTT"},
 
-{path = "posts/QuickCode/2022-09-02-PromisesGraphQL.md", url = "/posts/2022-09-02-PromisesGraphQL.html", title = "Promises Callback GraphQL and fetch"},
+{path = "posts/CodeEtc/2022-09-02-QuickGraphQL.md", url = "/posts/2022-09-02-QuickGraphQL.html", title = "Quick GraphQL"},
 
-{path = "posts/QuickCode/2022-09-02-NextGithubpages.md", url = "/posts/2022-09-02-NextGithubpages.html", title = "Autobuild Nextjs github pages"},
+{path = "posts/CodeEtc/2022-09-02-QuickGoTool.md", url = "/posts/2022-09-02-QuickGoTool.html", title = "Quick Golang Tooling"},
 
-{path = "posts/QuickCode/2022-09-02-NQueen.md", url = "/posts/2022-09-02-NQueen.html", title = "NQueen in Haskell"},
+{path = "posts/CodeEtc/2022-09-02-QuickGoPre.md", url = "/posts/2022-09-02-QuickGoPre.html", title = "Quick Golang 0"},
 
-{path = "posts/QuickCode/2022-09-02-LitReview.md", url = "/posts/2022-09-02-LitReview.html", title = "Literature review"},
+{path = "posts/CodeEtc/2022-09-02-QuickGo.md", url = "/posts/2022-09-02-QuickGo.html", title = "Quick Golang 1"},
 
-{path = "posts/QuickCode/2022-09-02-HaskellSnips.md", url = "/posts/2022-09-02-HaskellSnips.html", title = "Haskell snippets"},
+{path = "posts/CodeEtc/2022-09-02-QuickErlang.md", url = "/posts/2022-09-02-QuickErlang.html", title = "Quick Erlang"},
 
-{path = "posts/QuickCode/2022-09-02-GoSnips.md", url = "/posts/2022-09-02-GoSnips.html", title = "Go Snippets"},
+{path = "posts/CodeEtc/2022-09-02-QuickASP.md", url = "/posts/2022-09-02-QuickASP.html", title = "Quick ASP"},
 
-{path = "posts/QuickCode/2022-09-02-GithubAction.md", url = "/posts/2022-09-02-GithubAction.html", title = "CI/CD in GithubAction"},
+{path = "posts/CodeEtc/2022-09-02-PythonSnips.md", url = "/posts/2022-09-02-PythonSnips.html", title = "Python Snippets"},
 
-{path = "posts/QuickCode/2022-09-02-GithubAPI.md", url = "/posts/2022-09-02-GithubAPI.html", title = "Calling Github APIs"},
+{path = "posts/CodeEtc/2022-09-02-PythonFrameScope.md", url = "/posts/2022-09-02-PythonFrameScope.html", title = "Frames Scope and Python"},
 
-{path = "posts/QuickCode/2022-09-02-GitCrashCourse.md", url = "/posts/2022-09-02-GitCrashCourse.html", title = "Git Crashcourse"},
+{path = "posts/CodeEtc/2022-09-02-PythonDeepCopy.md", url = "/posts/2022-09-02-PythonDeepCopy.html", title = "Shallow vs Deep copy"},
 
-{path = "posts/QuickCode/2022-09-02-CodeIdiosyncrasy.md", url = "/posts/2022-09-02-CodeIdiosyncrasy.html", title = "Programming Lang Idiosyncrasies and Similarities"},
+{path = "posts/CodeEtc/2022-09-02-PromisesGraphQL.md", url = "/posts/2022-09-02-PromisesGraphQL.html", title = "Promises Callback GraphQL and fetch"},
 
-{path = "posts/QuickCode/2022-09-02-Callcc.md", url = "/posts/2022-09-02-Callcc.html", title = "Visualize Callcc"},
+{path = "posts/CodeEtc/2022-09-02-GoSnips.md", url = "/posts/2022-09-02-GoSnips.html", title = "Go Snippets"},
 
-{path = "posts/QuickCode/2022-09-02-CSSFlexbox.md", url = "/posts/2022-09-02-CSSFlexbox.html", title = "CSS Flexbox Grid"},
+{path = "posts/CodeEtc/2022-09-02-CodeIdiosyncrasy.md", url = "/posts/2022-09-02-CodeIdiosyncrasy.html", title = "Programming Lang Idiosyncrasies and Similarities"},
 
-{path = "posts/QuickCode/2022-09-02-CSS.md", url = "/posts/2022-09-02-CSS.html", title = "CSS"},
+{path = "posts/CodeEtc/2022-09-02-CPython.md", url = "/posts/2022-09-02-CPython.html", title = "Everything is a pointer perspective"},
 
-{path = "posts/QuickCode/2022-09-02-CPython.md", url = "/posts/2022-09-02-CPython.html", title = "Everything is a pointer perspective"},
+{path = "posts/C/2022-09-02-makefile.md", url = "/posts/2022-09-02-makefile.html", title = "makefile"},
 
-{path = "posts/QuickCode/2022-09-02-Bootstrap.md", url = "/posts/2022-09-02-Bootstrap.html", title = "Bootstrap"},
+{path = "posts/Algorithms/2022-09-02-NQueen.md", url = "/posts/2022-09-02-NQueen.html", title = "NQueen in Haskell"},
 
-{path = "posts/QuickCode/2022-09-02-BlockChain.md", url = "/posts/2022-09-02-BlockChain.html", title = "Blockchain"},
+{path = "posts/DevOps/2022-06-02-BookKubernetes/2022-08-01-BookKubernetes.md", url = "/posts/2022-08-01-BookKubernetes.html", title = "Setup Kubernetes Cluster"},
 
-{path = "posts/DevOp/2022-06-02-BookKubernetes/2022-08-01-BookKubernetes.md", url = "/posts/2022-08-01-BookKubernetes.html", title = "Setup Kubernetes Cluster"},
+{path = "posts/DevOps/2022-06-02-Linkerd.md", url = "/posts/2022-06-02-Linkerd.html", title = "Kubernetes Linkerd"},
 
-{path = "posts/DevOp/2022-06-02-Linkerd.md", url = "/posts/2022-06-02-Linkerd.html", title = "Kubernetes Linkerd"},
+{path = "posts/DevOps/2022-06-02-KubernetesSetup.md", url = "/posts/2022-06-02-KubernetesSetup.html", title = "Setup Kubernetes Cluster k3"},
 
-{path = "posts/DevOp/2022-06-02-KubernetesSetup.md", url = "/posts/2022-06-02-KubernetesSetup.html", title = "Setup Kubernetes Cluster k3"},
+{path = "posts/DevOps/2022-06-02-Kubernetes.md", url = "/posts/2022-06-02-Kubernetes.html", title = "Kubernetes"},
 
-{path = "posts/DevOp/2022-06-02-Kubernetes.md", url = "/posts/2022-06-02-Kubernetes.html", title = "Kubernetes"},
+{path = "posts/DevOps/2022-06-02-Docker4.md", url = "/posts/2022-06-02-Docker4.html", title = "Docker - linux container file structure"},
 
-{path = "posts/DevOp/2022-06-02-Docker4.md", url = "/posts/2022-06-02-Docker4.html", title = "Docker - linux container file structure"},
+{path = "posts/DevOps/2022-06-02-Docker3.md", url = "/posts/2022-06-02-Docker3.html", title = "Docker Compose"},
 
-{path = "posts/DevOp/2022-06-02-Docker3.md", url = "/posts/2022-06-02-Docker3.html", title = "Docker Compose"},
+{path = "posts/DevOps/2022-06-02-Docker2.md", url = "/posts/2022-06-02-Docker2.html", title = "Docker Snippets"},
 
-{path = "posts/DevOp/2022-06-02-Docker2.md", url = "/posts/2022-06-02-Docker2.html", title = "Docker Snippets"},
+{path = "posts/DevOps/2022-06-02-Docker.md", url = "/posts/2022-06-02-Docker.html", title = "Docker"},
 
-{path = "posts/DevOp/2022-06-02-Docker.md", url = "/posts/2022-06-02-Docker.html", title = "Docker"},
+{path = "posts/DevOps/2022-06-02-Dapr.md", url = "/posts/2022-06-02-Dapr.html", title = "Dapr"},
 
-{path = "posts/DevOp/2022-06-02-Dapr.md", url = "/posts/2022-06-02-Dapr.html", title = "Dapr"},
+{path = "posts/Hacksoft/2022-04-09-TFTP.md", url = "/posts/2022-04-09-TFTP.html", title = "TFTP"},
+
+{path = "posts/CodeEtc/2022-04-09-WebGL.md", url = "/posts/2022-04-09-WebGL.html", title = "WebGL"},
+
+{path = "posts/CodeEtc/2022-04-03-UnrealEngine2.md", url = "/posts/2022-04-03-UnrealEngine2.html", title = "Unreal Engine and C++"},
+
+{path = "posts/CodeEtc/2022-04-03-UnrealEngine.md", url = "/posts/2022-04-03-UnrealEngine.html", title = "Unreal Engine and Android Setup"},
 
 {path = "posts/SQL/2022-03-02-SQLsnippets.md", url = "/posts/2022-03-02-SQLsnippets.html", title = "SQL code snippets with golang js"},
 
@@ -149,6 +155,14 @@ files = [
 {path = "posts/Cloudflare/2022-01-01-workers.md", url = "/posts/2022-01-01-workers.html", title = "Cloudflare"},
 
 {path = "posts/Cloudflare/2022-01-01-DNSR2.md", url = "/posts/2022-01-01-DNSR2.html", title = "Cloudflare R2"},
+
+{path = "posts/Misc/2021-11-15-GoogleAnalytics.md", url = "/posts/2021-11-15-GoogleAnalytics.html", title = "Understanding Google Analytics"},
+
+{path = "posts/Misc/2021-11-11-HaskellTips.md", url = "/posts/2021-11-11-HaskellTips.html", title = "Lessons from Haskell"},
+
+{path = "posts/Javascript/2021-11-10-BigDataPlots.md", url = "/posts/2021-11-10-BigDataPlots.html", title = "Excursions with plotting big data"},
+
+{path = "posts/Javascript/2021-11-10-Authentication.md", url = "/posts/2021-11-10-Authentication.html", title = "Authentication OAuth2 SAML"},
 
 {path = "posts/2021-10-15-3dplots/2021-10-15-3dplots.md", url = "/posts/2021-10-15-3dplots.html", title = "3d plots and Contour plot"},
 
@@ -249,6 +263,18 @@ files = [
 {path = "posts/AWS/2021-10-02-AWSAmplify/2021-10-02-AWSAmplify.md", url = "/posts/2021-10-02-AWSAmplify.html", title = "Quick AWS Amplify"},
 
 {path = "posts/Javascript/2021-10-01-WebComponents.md", url = "/posts/2021-10-01-WebComponents.html", title = "Web Components"},
+
+{path = "posts/Misc/2021-09-21-Bookmarks.md", url = "/posts/2021-09-21-Bookmarks.html", title = "Bookmarks"},
+
+{path = "posts/Javascript/2021-08-25-RequestHeader.md", url = "/posts/2021-08-25-RequestHeader.html", title = "HTTP requests - Design proper headers in python"},
+
+{path = "posts/Javascript/2021-08-25-HttpTut.md", url = "/posts/2021-08-25-HttpTut.html", title = "HTTP TLS(SSL) Certificates"},
+
+{path = "posts/AWS/2021-08-25-Alexa.md", url = "/posts/2021-08-25-Alexa.html", title = "Alexa"},
+
+{path = "posts/Misc/2021-08-10-PvNP.md", url = "/posts/2021-08-10-PvNP.html", title = "P = NP question"},
+
+{path = "posts/CodeEtc/2021-08-10-trace.md", url = "/posts/2021-08-10-trace.html", title = "Trace and Decorators reinvented in python"},
 
 {path = "posts/Mathematica/2021-04-04-VisualLogic.md", url = "/posts/2021-04-04-VisualLogic.html", title = "Mathematica - Visual Logic"},
 
@@ -452,8 +478,6 @@ files = [
 
 {path = "posts/Physics/2019-02-02-SolvingDiffyQ.md", url = "/posts/2019-02-02-SolvingDiffyQ.html", title = "Differential Equations 1"},
 
-{path = "posts/Physics/2019-02-02-RNA.md", url = "/posts/2019-02-02-RNA.html", title = "Genetics and Bio lab techniques"},
-
 {path = "posts/Physics/2019-02-02-PenrosePhysics.md", url = "/posts/2019-02-02-PenrosePhysics.html", title = "Penrose Physics notes"},
 
 {path = "posts/Physics/2019-02-02-Maxwell.md", url = "/posts/2019-02-02-Maxwell.html", title = "Maxwell Equations"},
@@ -469,6 +493,8 @@ files = [
 {path = "posts/Physics/2019-02-02-ControlSystems.md", url = "/posts/2019-02-02-ControlSystems.html", title = "ControlSystems"},
 
 {path = "posts/Physics/2019-02-02-Circuits.md", url = "/posts/2019-02-02-Circuits.html", title = "Circuits"},
+
+{path = "posts/BioChem/2019-02-02-RNA.md", url = "/posts/2019-02-02-RNA.html", title = "Genetics and Bio lab techniques"},
 
 {path = "posts/BioChem/2019-02-02-MathBio.md", url = "/posts/2019-02-02-MathBio.html", title = "Math Biology"},
 
@@ -530,37 +556,37 @@ files = [
 
 {path = "posts/Economics/2015-07-01-CaseStudies/2015-07-01-CaseStudies.md", url = "/posts/2015-07-01-CaseStudies.html", title = "Case Studies Stocks and Bonds"},
 
-{path = "posts/CyberSec/2015-02-01-pyFTP.md", url = "/posts/2015-02-01-pyFTP.html", title = "python FTP SMTP POP3 IMAP DNS"},
+{path = "posts/Hacksoft/2015-02-01-pyFTP.md", url = "/posts/2015-02-01-pyFTP.html", title = "python FTP SMTP POP3 IMAP DNS"},
 
-{path = "posts/CyberSec/2015-02-01-flashingOpenIPC.md", url = "/posts/2015-02-01-flashingOpenIPC.html", title = "Flashing OpenIPC camera"},
+{path = "posts/Hacksoft/2015-02-01-SFTPtransfer.md", url = "/posts/2015-02-01-SFTPtransfer.html", title = "Transfer files SFTP"},
 
-{path = "posts/CyberSec/2015-02-01-SettingUpHyperV.md", url = "/posts/2015-02-01-SettingUpHyperV.html", title = "HyperV on a home server"},
+{path = "posts/Hacksoft/2015-02-01-PenTest3.md", url = "/posts/2015-02-01-PenTest3.html", title = "Pen Testing 3 SQL, Burp"},
 
-{path = "posts/CyberSec/2015-02-01-SFTPtransfer.md", url = "/posts/2015-02-01-SFTPtransfer.html", title = "Transfer files SFTP"},
+{path = "posts/Hacksoft/2015-02-01-PenTest2.md", url = "/posts/2015-02-01-PenTest2.html", title = "Pen Testing 2"},
 
-{path = "posts/CyberSec/2015-02-01-RemoteSoundToPhone.md", url = "/posts/2015-02-01-RemoteSoundToPhone.html", title = "Remote Desktop Audio to phone"},
+{path = "posts/Hacksoft/2015-02-01-PenTest.md", url = "/posts/2015-02-01-PenTest.html", title = "Pen Testing"},
 
-{path = "posts/CyberSec/2015-02-01-PenTest3.md", url = "/posts/2015-02-01-PenTest3.html", title = "Pen Testing 3 SQL, Burp"},
+{path = "posts/Hacksoft/2015-02-01-LinuxScripts.md", url = "/posts/2015-02-01-LinuxScripts.html", title = "Linux annoying setup commands"},
 
-{path = "posts/CyberSec/2015-02-01-PenTest2.md", url = "/posts/2015-02-01-PenTest2.html", title = "Pen Testing 2"},
+{path = "posts/Hacksoft/2015-02-01-Hash.md", url = "/posts/2015-02-01-Hash.html", title = "Hashing"},
 
-{path = "posts/CyberSec/2015-02-01-PenTest.md", url = "/posts/2015-02-01-PenTest.html", title = "Pen Testing"},
+{path = "posts/Hacksoft/2015-02-01-FormattingSDcard.md", url = "/posts/2015-02-01-FormattingSDcard.html", title = "Formatting SDcard"},
 
-{path = "posts/CyberSec/2015-02-01-OpenWrtPentest.md", url = "/posts/2015-02-01-OpenWrtPentest.html", title = "Pen Testing OpenWrt"},
+{path = "posts/Hacksoft/2015-02-01-CyberSec.md", url = "/posts/2015-02-01-CyberSec.html", title = "Misc CyberSecurity"},
 
-{path = "posts/CyberSec/2015-02-01-MonitorPhonePacket.md", url = "/posts/2015-02-01-MonitorPhonePacket.html", title = "Monitor Phone Packets"},
+{path = "posts/Hacksoft/2015-02-01-AndroidBash.md", url = "/posts/2015-02-01-AndroidBash.html", title = "Android and Bash"},
 
-{path = "posts/CyberSec/2015-02-01-LinuxScripts.md", url = "/posts/2015-02-01-LinuxScripts.html", title = "Linux annoying setup commands"},
+{path = "posts/Hackhard/2015-02-01-flashingOpenIPC.md", url = "/posts/2015-02-01-flashingOpenIPC.html", title = "Flashing OpenIPC camera"},
 
-{path = "posts/CyberSec/2015-02-01-HyperVExpand.md", url = "/posts/2015-02-01-HyperVExpand.html", title = "HyperV Expand win 10 VM virtual hard drive space"},
+{path = "posts/Hackhard/2015-02-01-SettingUpHyperV.md", url = "/posts/2015-02-01-SettingUpHyperV.html", title = "HyperV on a home server"},
 
-{path = "posts/CyberSec/2015-02-01-Hash.md", url = "/posts/2015-02-01-Hash.html", title = "Hashing"},
+{path = "posts/Hackhard/2015-02-01-RemoteSoundToPhone.md", url = "/posts/2015-02-01-RemoteSoundToPhone.html", title = "Remote Desktop Audio to phone"},
 
-{path = "posts/CyberSec/2015-02-01-FormattingSDcard.md", url = "/posts/2015-02-01-FormattingSDcard.html", title = "Formatting SDcard"},
+{path = "posts/Hackhard/2015-02-01-OpenWrtPentest.md", url = "/posts/2015-02-01-OpenWrtPentest.html", title = "Pen Testing OpenWrt"},
 
-{path = "posts/CyberSec/2015-02-01-CyberSec.md", url = "/posts/2015-02-01-CyberSec.html", title = "Misc CyberSecurity"},
+{path = "posts/Hackhard/2015-02-01-MonitorPhonePacket.md", url = "/posts/2015-02-01-MonitorPhonePacket.html", title = "Monitor Phone Packets"},
 
-{path = "posts/CyberSec/2015-02-01-AndroidBash.md", url = "/posts/2015-02-01-AndroidBash.html", title = "Android and Bash"},
+{path = "posts/Hackhard/2015-02-01-HyperVExpand.md", url = "/posts/2015-02-01-HyperVExpand.html", title = "HyperV Expand win 10 VM virtual hard drive space"},
 
 {path = "posts/2015-01-01-stuff/2015-01-01-stuff.md", url = "/posts/2015-01-01-stuff.html", title = "Simple"},
 
@@ -618,13 +644,13 @@ files = [
 
 {path = "posts/OtherMath/2014-05-01-BuildNatSets.md", url = "/posts/2014-05-01-BuildNatSets.html", title = "Building Natural numbers from Sets with python"},
 
-{path = "posts/AppliedTechniques/2013-04-01-Z3.md", url = "/posts/2013-04-01-Z3.html", title = "Z3"},
+{path = "posts/AppliedMath/2013-04-01-Z3.md", url = "/posts/2013-04-01-Z3.html", title = "Z3"},
 
-{path = "posts/AppliedTechniques/2013-04-01-SVD.md", url = "/posts/2013-04-01-SVD.html", title = "SVD"},
+{path = "posts/AppliedMath/2013-04-01-SVD.md", url = "/posts/2013-04-01-SVD.html", title = "SVD"},
 
-{path = "posts/AppliedTechniques/2013-04-01-MarkovChain.md", url = "/posts/2013-04-01-MarkovChain.html", title = "Markov Chain and State machines"},
+{path = "posts/AppliedMath/2013-04-01-MarkovChain.md", url = "/posts/2013-04-01-MarkovChain.html", title = "Markov Chain and State machines"},
 
-{path = "posts/AppliedTechniques/2013-04-01-FFT.md", url = "/posts/2013-04-01-FFT.html", title = "FFT DFT"},
+{path = "posts/AppliedMath/2013-04-01-FFT.md", url = "/posts/2013-04-01-FFT.html", title = "FFT DFT"},
 
 {path = "posts/Algorithms/2013-01-01-ProofBFS.md", url = "/posts/2013-01-01-ProofBFS.html", title = "Proof - BFS gets shortest distance"},
 
@@ -646,31 +672,13 @@ files = [
 
 {path = "posts/Algorithms/2013-01-01-BalancedTree.md", url = "/posts/2013-01-01-BalancedTree.html", title = "Data Struct - Balanced Trees"},
 
-{path = "posts/Misc/2012-10-02-ncat.md", url = "/posts/2012-10-02-ncat.html", title = "ncat"},
-
-{path = "posts/Misc/2012-10-02-dotfile.md", url = "/posts/2012-10-02-dotfile.html", title = "dotfile"},
-
-{path = "posts/Misc/2012-10-02-Vim.md", url = "/posts/2012-10-02-Vim.html", title = "Vim"},
-
-{path = "posts/Misc/2012-10-02-UpdateHakyllPost.md", url = "/posts/2012-10-02-UpdateHakyllPost.html", title = "Updating Hakyll posts"},
-
-{path = "posts/Misc/2012-10-02-TableOfContent.md", url = "/posts/2012-10-02-TableOfContent.html", title = "Table Of Content in Hakyll"},
-
 {path = "posts/Misc/2012-10-02-Shipping.md", url = "/posts/2012-10-02-Shipping.html", title = "Shipping"},
 
 {path = "posts/Misc/2012-10-02-Sewing.md", url = "/posts/2012-10-02-Sewing.html", title = "Sewing machines"},
 
-{path = "posts/Misc/2012-10-02-SetupCoq.md", url = "/posts/2012-10-02-SetupCoq.html", title = "Coq Setup"},
-
-{path = "posts/Misc/2012-10-02-Screens.md", url = "/posts/2012-10-02-Screens.html", title = "Screens"},
-
-{path = "posts/Misc/2012-10-02-RedHatEnv.md", url = "/posts/2012-10-02-RedHatEnv.html", title = "Setting up Dev Env in linux"},
+{path = "posts/Misc/2012-10-02-Screens.md", url = "/posts/2012-10-02-Screens.html", title = "IPS TN computer Screens, resolution, refresh rate"},
 
 {path = "posts/Misc/2012-10-02-RandTips.md", url = "/posts/2012-10-02-RandTips.html", title = "Random Shortcuts"},
-
-{path = "posts/Misc/2012-10-02-RailroadSyntax.md", url = "/posts/2012-10-02-RailroadSyntax.html", title = "Add Railroad Syntax to Hakyll"},
-
-{path = "posts/Misc/2012-10-02-QEMUrhel.md", url = "/posts/2012-10-02-QEMUrhel.html", title = "Install QEMU on RHEL 9"},
 
 {path = "posts/Misc/2012-10-02-Psychology.md", url = "/posts/2012-10-02-Psychology.html", title = "Transactional Psychology"},
 
@@ -678,69 +686,87 @@ files = [
 
 {path = "posts/Misc/2012-10-02-Politics.md", url = "/posts/2012-10-02-Politics.html", title = "Economic Report"},
 
-{path = "posts/Misc/2012-10-02-PlantUMLkey.md", url = "/posts/2012-10-02-PlantUMLkey.html", title = "PlantUML diagram list"},
-
-{path = "posts/Misc/2012-10-02-PandocFiltering.md", url = "/posts/2012-10-02-PandocFiltering.html", title = "Hakyll Pandoc filtering"},
-
-{path = "posts/Misc/2012-10-02-OpenWrtWho.md", url = "/posts/2012-10-02-OpenWrtWho.html", title = "OpenWrt Check who is connected"},
-
-{path = "posts/Misc/2012-10-02-OpenWrt.md", url = "/posts/2012-10-02-OpenWrt.html", title = "OpenWrt - Setup"},
-
-{path = "posts/Misc/2012-10-02-OpenVpn.md", url = "/posts/2012-10-02-OpenVpn.html", title = "OpenVPN and certificates"},
-
 {path = "posts/Misc/2012-10-02-MusicTheory.md", url = "/posts/2012-10-02-MusicTheory.html", title = "Music Theory"},
-
-{path = "posts/Misc/2012-10-02-MeshOpenWrt.md", url = "/posts/2012-10-02-MeshOpenWrt.html", title = "OpenWrt - Mesh"},
-
-{path = "posts/Misc/2012-10-02-MarkdownStyles.md", url = "/posts/2012-10-02-MarkdownStyles.html", title = "Markdown Styling"},
-
-{path = "posts/Misc/2012-10-02-LoadTesting.md", url = "/posts/2012-10-02-LoadTesting.html", title = "Load Testing Vegeta Locust"},
-
-{path = "posts/Misc/2012-10-02-Linux1.md", url = "/posts/2012-10-02-Linux1.html", title = "Linux 1 USB"},
-
-{path = "posts/Misc/2012-10-02-LaTex.md", url = "/posts/2012-10-02-LaTex.html", title = "LaTeX TexLive LaTex Workshop"},
-
-{path = "posts/Misc/2012-10-02-KyoceraPrinters.md", url = "/posts/2012-10-02-KyoceraPrinters.html", title = "Convert Enterprise printer to a prosumer printer OpnWrt Mesh"},
 
 {path = "posts/Misc/2012-10-02-Kant/2012-10-02-Kant.md", url = "/posts/2012-10-02-Kant.html", title = "Philosophy"},
 
-{path = "posts/Misc/2012-10-02-InstallWifiDongle.md", url = "/posts/2012-10-02-InstallWifiDongle.html", title = "Installing Generic Wifi dongle on Kali/Debian/Linux"},
-
 {path = "posts/Misc/2012-10-02-House/2012-10-02-House.md", url = "/posts/2012-10-02-House.html", title = "Property Construction House"},
-
-{path = "posts/Misc/2012-10-02-HostApd.md", url = "/posts/2012-10-02-HostApd.html", title = "hostapd access point"},
 
 {path = "posts/Misc/2012-10-02-HomeWiringMistake.md", url = "/posts/2012-10-02-HomeWiringMistake.html", title = "Home Wiring Rookie mistake"},
 
-{path = "posts/Misc/2012-10-02-HakyllStorkSearch.md", url = "/posts/2012-10-02-HakyllStorkSearch.html", title = "Hakyll stork search"},
-
-{path = "posts/Misc/2012-10-02-HakyllSetupMathjax.md", url = "/posts/2012-10-02-HakyllSetupMathjax.html", title = "Adding Mathjax to Hakyll in 2021"},
-
-{path = "posts/Misc/2012-10-02-HakyllPlantUML2.md", url = "/posts/2012-10-02-HakyllPlantUML2.html", title = "Integrate PlantUML diagrams into Hakyll (Updated)"},
-
-{path = "posts/Misc/2012-10-02-HakyllPlantUML.md", url = "/posts/2012-10-02-HakyllPlantUML.html", title = "Integrate PlantUML diagrams into Hakyll (Old)"},
-
-{path = "posts/Misc/2012-10-02-HakyllMassRename.md", url = "/posts/2012-10-02-HakyllMassRename.html", title = "Hakyll Bulk rename"},
-
-{path = "posts/Misc/2012-10-02-HakyllGitAction.md", url = "/posts/2012-10-02-HakyllGitAction.html", title = "Autobuild Hakyll"},
-
-{path = "posts/Misc/2012-10-02-HakyllCodeTabs.md", url = "/posts/2012-10-02-HakyllCodeTabs.html", title = "Tabbed Code blocks in Hakyll"},
-
-{path = "posts/Misc/2012-10-02-HakyllAccessOnLAN.md", url = "/posts/2012-10-02-HakyllAccessOnLAN.html", title = "Access Hakyll website on LAN and iptables"},
-
-{path = "posts/Misc/2012-10-02-GuideToChoosingRouters.md", url = "/posts/2012-10-02-GuideToChoosingRouters.html", title = "Guide to Choosing Routers"},
-
-{path = "posts/Misc/2012-10-02-FrigateNVR.md", url = "/posts/2012-10-02-FrigateNVR.html", title = "Setup Frigate NVR"},
-
-{path = "posts/Misc/2012-10-02-ForeignOpenWrtRouter.md", url = "/posts/2012-10-02-ForeignOpenWrtRouter.html", title = "2021 Installing Openwrt"},
-
-{path = "posts/Misc/2012-10-02-Ender3Pro.md", url = "/posts/2012-10-02-Ender3Pro.html", title = "Ender 3 Pro 3d printing setup"},
-
-{path = "posts/Misc/2012-10-02-CodeServer.md", url = "/posts/2012-10-02-CodeServer.html", title = "Code-Server"},
-
 {path = "posts/Misc/2012-10-02-Bread.md", url = "/posts/2012-10-02-Bread.html", title = "Panasonic SD-MDX102-K Breadmaker Translated"},
 
-{path = "posts/Misc/2012-10-02-ArcherC7.md", url = "/posts/2012-10-02-ArcherC7.html", title = "2021 OpenWrt - Archer C7"},
+{path = "posts/Hacksoft/2012-10-02-ncat.md", url = "/posts/2012-10-02-ncat.html", title = "ncat"},
+
+{path = "posts/Hacksoft/2012-10-02-dotfile.md", url = "/posts/2012-10-02-dotfile.html", title = "dotfile"},
+
+{path = "posts/Hacksoft/2012-10-02-Vim.md", url = "/posts/2012-10-02-Vim.html", title = "Vim"},
+
+{path = "posts/Hacksoft/2012-10-02-UpdateHakyllPost.md", url = "/posts/2012-10-02-UpdateHakyllPost.html", title = "Updating Hakyll posts"},
+
+{path = "posts/Hacksoft/2012-10-02-TableOfContent.md", url = "/posts/2012-10-02-TableOfContent.html", title = "Table Of Content in Hakyll"},
+
+{path = "posts/Hacksoft/2012-10-02-SetupCoq.md", url = "/posts/2012-10-02-SetupCoq.html", title = "Coq Setup"},
+
+{path = "posts/Hacksoft/2012-10-02-RailroadSyntax.md", url = "/posts/2012-10-02-RailroadSyntax.html", title = "Add Railroad Syntax to Hakyll"},
+
+{path = "posts/Hacksoft/2012-10-02-PlantUMLkey.md", url = "/posts/2012-10-02-PlantUMLkey.html", title = "PlantUML diagram list"},
+
+{path = "posts/Hacksoft/2012-10-02-PandocFiltering.md", url = "/posts/2012-10-02-PandocFiltering.html", title = "Hakyll Pandoc filtering"},
+
+{path = "posts/Hacksoft/2012-10-02-MarkdownStyles.md", url = "/posts/2012-10-02-MarkdownStyles.html", title = "Markdown Styling"},
+
+{path = "posts/Hacksoft/2012-10-02-LoadTesting.md", url = "/posts/2012-10-02-LoadTesting.html", title = "Load Testing Vegeta Locust"},
+
+{path = "posts/Hacksoft/2012-10-02-Linux1.md", url = "/posts/2012-10-02-Linux1.html", title = "Linux 1 USB"},
+
+{path = "posts/Hacksoft/2012-10-02-LaTex.md", url = "/posts/2012-10-02-LaTex.html", title = "LaTeX TexLive LaTex Workshop"},
+
+{path = "posts/Hacksoft/2012-10-02-HostApd.md", url = "/posts/2012-10-02-HostApd.html", title = "hostapd access point"},
+
+{path = "posts/Hacksoft/2012-10-02-HakyllStorkSearch.md", url = "/posts/2012-10-02-HakyllStorkSearch.html", title = "Hakyll stork search"},
+
+{path = "posts/Hacksoft/2012-10-02-HakyllSetupMathjax.md", url = "/posts/2012-10-02-HakyllSetupMathjax.html", title = "Adding Mathjax to Hakyll in 2021"},
+
+{path = "posts/Hacksoft/2012-10-02-HakyllPlantUML2.md", url = "/posts/2012-10-02-HakyllPlantUML2.html", title = "Integrate PlantUML diagrams into Hakyll (Updated)"},
+
+{path = "posts/Hacksoft/2012-10-02-HakyllPlantUML.md", url = "/posts/2012-10-02-HakyllPlantUML.html", title = "Integrate PlantUML diagrams into Hakyll (Old)"},
+
+{path = "posts/Hacksoft/2012-10-02-HakyllMassRename.md", url = "/posts/2012-10-02-HakyllMassRename.html", title = "Hakyll Bulk rename"},
+
+{path = "posts/Hacksoft/2012-10-02-HakyllGitAction.md", url = "/posts/2012-10-02-HakyllGitAction.html", title = "Autobuild Hakyll"},
+
+{path = "posts/Hacksoft/2012-10-02-HakyllCodeTabs.md", url = "/posts/2012-10-02-HakyllCodeTabs.html", title = "Tabbed Code blocks in Hakyll"},
+
+{path = "posts/Hacksoft/2012-10-02-HakyllAccessOnLAN.md", url = "/posts/2012-10-02-HakyllAccessOnLAN.html", title = "Access Hakyll website on LAN and iptables"},
+
+{path = "posts/Hacksoft/2012-10-02-CodeServer.md", url = "/posts/2012-10-02-CodeServer.html", title = "Code-Server"},
+
+{path = "posts/Hackhard/2012-10-02-RedHatEnv.md", url = "/posts/2012-10-02-RedHatEnv.html", title = "Setting up Dev Env in linux"},
+
+{path = "posts/Hackhard/2012-10-02-QEMUrhel.md", url = "/posts/2012-10-02-QEMUrhel.html", title = "Install QEMU on RHEL 9"},
+
+{path = "posts/Hackhard/2012-10-02-OpenWrtWho.md", url = "/posts/2012-10-02-OpenWrtWho.html", title = "OpenWrt Check who is connected"},
+
+{path = "posts/Hackhard/2012-10-02-OpenWrt.md", url = "/posts/2012-10-02-OpenWrt.html", title = "OpenWrt - Setup"},
+
+{path = "posts/Hackhard/2012-10-02-OpenVpn.md", url = "/posts/2012-10-02-OpenVpn.html", title = "OpenVPN and certificates"},
+
+{path = "posts/Hackhard/2012-10-02-MeshOpenWrt.md", url = "/posts/2012-10-02-MeshOpenWrt.html", title = "OpenWrt - Mesh"},
+
+{path = "posts/Hackhard/2012-10-02-KyoceraPrinters.md", url = "/posts/2012-10-02-KyoceraPrinters.html", title = "Convert Enterprise printer to a prosumer printer OpnWrt Mesh"},
+
+{path = "posts/Hackhard/2012-10-02-InstallWifiDongle.md", url = "/posts/2012-10-02-InstallWifiDongle.html", title = "Installing Generic Wifi dongle on Kali/Debian/Linux"},
+
+{path = "posts/Hackhard/2012-10-02-GuideToChoosingRouters.md", url = "/posts/2012-10-02-GuideToChoosingRouters.html", title = "Guide to Choosing Routers"},
+
+{path = "posts/Hackhard/2012-10-02-FrigateNVR.md", url = "/posts/2012-10-02-FrigateNVR.html", title = "Setup Frigate NVR"},
+
+{path = "posts/Hackhard/2012-10-02-ForeignOpenWrtRouter.md", url = "/posts/2012-10-02-ForeignOpenWrtRouter.html", title = "2021 Installing Openwrt"},
+
+{path = "posts/Hackhard/2012-10-02-Ender3Pro.md", url = "/posts/2012-10-02-Ender3Pro.html", title = "Ender 3 Pro 3d printing setup"},
+
+{path = "posts/Hackhard/2012-10-02-ArcherC7.md", url = "/posts/2012-10-02-ArcherC7.html", title = "2021 OpenWrt - Archer C7"},
 
 {path = "posts/ArawHTML/Meta.html", url = "/posts/Meta.html", title = "ASDIPADawef"},
 

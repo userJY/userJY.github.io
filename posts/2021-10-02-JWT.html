@@ -37,7 +37,7 @@
         </noscript>
          <!-- NO JS Behavior END -->
 
-        <title>Jason Yang - Economics tag</title>
+        <title>Jason Yang - JWT</title>
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
     </head>
 
@@ -110,93 +110,341 @@
         </div>
 
         <div id="content">
-            <h1>Economics tag</h1>
+            <h1>JWT</h1>
             
 
-            <ul class="postlist">
+            <div class="info">
+    Posted on October  2, 2021
     
-        <li>
-            <a href="../posts/2015-07-01-thinkScript.html">Thinkscript</a> 
-        </li>
+</div>
+<div class="info">
     
-        <li>
-            <a href="../posts/2015-07-01-TradingMeasurement.html">Benchmarks for algotrading</a> 
-        </li>
+    Tags: <a title="All pages tagged 'javascript'." href="../tags/javascript.html">javascript</a>
     
-        <li>
-            <a href="../posts/2015-07-01-StockOptionsNotes.html">Options Derivatives Notes</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-StockIndicators.html">Trading Indicators</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-Stochastic.html">Stochastic calculus and brownian motion</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-MarketConcepts.html">Market Concepts</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-LoadStockFRED.html">Import, load, FRED, TDtrade in python, R</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-Industry.html">Industries</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-GlobalEconomy.html">Global Economy</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-FinanceTerms.html">Finance terms</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-FinTimeData.html">Loading and Plotting Financial Data</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-ExamP.html">Exam P</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-ExamIFM.html">Exam IFM</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-EconSignals.html">Econ terms</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-EconNotes.html">Econ Notes</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-EconGeo.html">Geometric Series Banking</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-DiscountRate.html">Discount Rate</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-DecisionTheory.html">Decision Minimax/min</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-Cointegration.html">Cointegration and Spreads</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-CaseStudies.html">Case Studies Stocks and Bonds</a> 
-        </li>
-    
+</div>
+<div id="TOC"><ul>
+<li><a href="#hash"><span class="toc-section-number">1</span> Hash</a></li>
+<li><a href="#hmac-vs-hash"><span class="toc-section-number">2</span> HMAC vs Hash</a></li>
+<li><a href="#hs256"><span class="toc-section-number">3</span> HS256</a></li>
+<li><a href="#rs256"><span class="toc-section-number">4</span> RS256</a></li>
+<li><a href="#algorithms"><span class="toc-section-number">5</span> Algorithms</a></li>
+</ul></div>
+<section id="hash" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Hash</h1>
+<ul>
+<li>FUNCTION: <code>crypto.subtle.digest("SHA-1",data)</code>
+<ul>
+<li>options are <code>"SHA-1"</code> <code>"SHA-256"</code> <code>"SHA-384"</code> <code>"SHA-512"</code></li>
+</ul></li>
+<li>Like SHA-256 or MD5 hash files to check INTEGRITY that files sent are not tampered</li>
 </ul>
-<script></script>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">const</span> text =</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.&quot;</span><span class="kw">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">async</span> function digestMessage<span class="er">(</span><span class="ex">message</span><span class="kw">)</span> <span class="kw">{</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="ex">const</span> encoder = new TextEncoder<span class="er">(</span><span class="kw">);</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">const</span> data = encoder.encode<span class="er">(</span><span class="ex">message</span><span class="kw">);</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">const</span> hash = await crypto.subtle.digest<span class="er">(</span><span class="st">&quot;SHA-256&quot;</span><span class="ex">,</span> data<span class="kw">);</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">hash</span><span class="kw">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ex">digestMessage</span><span class="er">(</span><span class="ex">text</span><span class="kw">)</span><span class="ex">.then</span><span class="er">((</span><span class="va">digestBuffer</span>) <span class="op">=&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="va">console</span>.<span class="va">log</span>(<span class="va">digestBuffer</span>.<span class="va">byteLength</span>)<span class="kw">,</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
+</section>
+<section id="hmac-vs-hash" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> HMAC vs Hash</h1>
+<ul>
+<li>INPUT: Private key generation algorithm, someFile</li>
+<li>HMAC is just the hashing using a seed derived from a private key.</li>
+<li>The private key gives AUTHENTICITY that files came from a sender that holds some private key.
+<ul>
+<li>Because only the sender can generate this Hash</li>
+</ul></li>
+<li>HMAC also gives INTEGRITY like typical Hash functions do</li>
+</ul>
+</section>
+<section id="hs256" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> HS256</h1>
+<ul>
+<li>HS256 is just HMAC using SHA256</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">let</span> <span class="va">key</span> <span class="op">=</span> <span class="va">await</span> <span class="va">window</span>.crypto.subtle.generateKey<span class="er">(</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">name:</span> <span class="st">&quot;HMAC&quot;</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">hash:</span> { name: <span class="st">&quot;SHA-256&quot;</span> },</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="ex">},</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">true</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">[</span><span class="st">&quot;sign&quot;</span><span class="ex">,</span> <span class="st">&quot;verify&quot;</span>],</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="er">)</span><span class="kw">;</span></span></code></pre></div>
+</section>
+<section id="rs256" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> RS256</h1>
+<ul>
+<li>RS256 (RSA using SHA256)</li>
+</ul>
+</section>
+<section id="algorithms" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Algorithms</h1>
+<ul>
+<li>For Symmetric algorithms, they generate a <code>CryptoKey</code> Object</li>
+<li>For Asymmetric algorithms, they generate a <code>CryptoKeyPair</code> Object. <code>sampleKeyPair.privateKey</code> and <code>sampleKeyPair.publicKey</code> are <code>CryptoKey</code> Objects derived from the <code>CryptoKeyPair</code> Object
+<ul>
+<li>asymmetric algorithms: RSASSA-PKCS1-v1_5, RSA-PSS, RSA-OAEP, ECDSA, or ECDH.</li>
+<li>Note: Assymmetric algorithms are commonly known as <strong>Public-key cryptography</strong></li>
+<li>Commonly used public-key cryptosystems are RSA (for both signing and encryption), DSA (for signing) and Diffie-Hellman (for key agreement)</li>
+</ul></li>
+</ul>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Algorithm</th>
+<th>sign()verify()</th>
+<th>encrypt()decrypt()</th>
+<th>digest()</th>
+<th>deriveBits()deriveKey()</th>
+<th>generateKey()</th>
+<th>wrapKey()unwrapKey()</th>
+<th>exportKey()</th>
+<th>importKey()</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>RSASSA PKCS1 v1.5*</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>RSA PSS*</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>RSA OAEP*</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>ECDSA*</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>ECDH*</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>Ed255191</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>X255191</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>NODE ED255192</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>AES CTR</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>AES CBC</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>AES GCM</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>AES KW</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>HMAC</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>SHA 1</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>SHA 256</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>SHA 384</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>SHA 512</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>MD53</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>HKDF</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>PBKDF2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+</section>
+
         </div>
         <div id="footer">
             <div class="flex-container" style="display:flex; justify-content: space-between;">

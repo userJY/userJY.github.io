@@ -218,6 +218,8 @@ files = [
 
 {path = "posts/Javascript/2021-10-02-MinLoginSystem.md", url = "/posts/2021-10-02-MinLoginSystem.html", title = "Min - Login System Express"},
 
+{path = "posts/Javascript/2021-10-02-JWT.md", url = "/posts/2021-10-02-JWT.html", title = "JWT"},
+
 {path = "posts/Javascript/2021-10-02-JSmodifyHTML.md", url = "/posts/2021-10-02-JSmodifyHTML.html", title = "JS Functions that Replace HTMLElement"},
 
 {path = "posts/Javascript/2021-10-02-JSfileBlobs.md", url = "/posts/2021-10-02-JSfileBlobs.html", title = "JS and file Blobs"},
@@ -263,6 +265,8 @@ files = [
 {path = "posts/AWS/2021-10-02-AWSAmplify/2021-10-02-AWSAmplify.md", url = "/posts/2021-10-02-AWSAmplify.html", title = "Quick AWS Amplify"},
 
 {path = "posts/Javascript/2021-10-01-WebComponents.md", url = "/posts/2021-10-01-WebComponents.html", title = "Web Components"},
+
+{path = "posts/Javascript/2021-10-01-ArrayOfBytesUTF8.md", url = "/posts/2021-10-01-ArrayOfBytesUTF8.html", title = "Array of Bytes and UTF-8 encoding"},
 
 {path = "posts/Misc/2021-09-21-Bookmarks.md", url = "/posts/2021-09-21-Bookmarks.html", title = "Bookmarks"},
 
@@ -532,6 +536,8 @@ files = [
 
 {path = "posts/Economics/2015-07-01-LoadStockFRED.md", url = "/posts/2015-07-01-LoadStockFRED.html", title = "Import, load, FRED, TDtrade in python, R"},
 
+{path = "posts/Economics/2015-07-01-Industry.md", url = "/posts/2015-07-01-Industry.html", title = "Industries"},
+
 {path = "posts/Economics/2015-07-01-GlobalEconomy.md", url = "/posts/2015-07-01-GlobalEconomy.html", title = "Global Economy"},
 
 {path = "posts/Economics/2015-07-01-FinanceTerms.md", url = "/posts/2015-07-01-FinanceTerms.html", title = "Finance terms"},
@@ -693,6 +699,8 @@ files = [
 {path = "posts/Misc/2012-10-02-House/2012-10-02-House.md", url = "/posts/2012-10-02-House.html", title = "Property Construction House"},
 
 {path = "posts/Misc/2012-10-02-HomeWiringMistake.md", url = "/posts/2012-10-02-HomeWiringMistake.html", title = "Home Wiring Rookie mistake"},
+
+{path = "posts/Misc/2012-10-02-HVAC.md", url = "/posts/2012-10-02-HVAC.html", title = "HVAC"},
 
 {path = "posts/Misc/2012-10-02-Bread.md", url = "/posts/2012-10-02-Bread.html", title = "Panasonic SD-MDX102-K Breadmaker Translated"},
 

@@ -37,7 +37,7 @@
         </noscript>
          <!-- NO JS Behavior END -->
 
-        <title>Jason Yang - Economics tag</title>
+        <title>Jason Yang - Array of Bytes and UTF-8 encoding</title>
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
     </head>
 
@@ -110,93 +110,40 @@
         </div>
 
         <div id="content">
-            <h1>Economics tag</h1>
+            <h1>Array of Bytes and UTF-8 encoding</h1>
             
 
-            <ul class="postlist">
+            <div class="info">
+    Posted on October  1, 2021
     
-        <li>
-            <a href="../posts/2015-07-01-thinkScript.html">Thinkscript</a> 
-        </li>
+</div>
+<div class="info">
     
-        <li>
-            <a href="../posts/2015-07-01-TradingMeasurement.html">Benchmarks for algotrading</a> 
-        </li>
+    Tags: <a title="All pages tagged 'javascript'." href="../tags/javascript.html">javascript</a>
     
-        <li>
-            <a href="../posts/2015-07-01-StockOptionsNotes.html">Options Derivatives Notes</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-StockIndicators.html">Trading Indicators</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-Stochastic.html">Stochastic calculus and brownian motion</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-MarketConcepts.html">Market Concepts</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-LoadStockFRED.html">Import, load, FRED, TDtrade in python, R</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-Industry.html">Industries</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-GlobalEconomy.html">Global Economy</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-FinanceTerms.html">Finance terms</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-FinTimeData.html">Loading and Plotting Financial Data</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-ExamP.html">Exam P</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-ExamIFM.html">Exam IFM</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-EconSignals.html">Econ terms</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-EconNotes.html">Econ Notes</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-EconGeo.html">Geometric Series Banking</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-DiscountRate.html">Discount Rate</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-DecisionTheory.html">Decision Minimax/min</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-Cointegration.html">Cointegration and Spreads</a> 
-        </li>
-    
-        <li>
-            <a href="../posts/2015-07-01-CaseStudies.html">Case Studies Stocks and Bonds</a> 
-        </li>
-    
+</div>
+<section id="array-of-bytes" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Array of bytes</h1>
+<ul>
+<li>Uint8Array is an array of bytes (8 bit = 1 byte).</li>
 </ul>
-<script></script>
+<pre class="mermaidjs"><code>flowchart BT
+    X[&quot;Array of Bytes\n(AOB)&quot;]
+    UU[&quot;Uint8Array&quot;] ---&gt;|implements| X
+    subgraph UU[&quot;Uint8Array&quot;]
+    P[&quot;Uint8Array\ndefault decimal rep\n[244,5,194,52,143]&quot;] 
+    P --o R[&quot;hex rep\n[0xF4,0x5,0xC2,0x34,0x8F]&quot;]
+    P --o RR[&quot;binary rep&quot;]
+    P --o RRR[&quot;octal rep&quot;]
+    VV[&quot;UTF8-Encoding&quot;] ---|&quot;equivalent\nrepresents&quot;| P
+    end
+    Q[&quot;Human String&quot;]
+    
+    
+    VV .-&gt;|&quot;decode(AOB)&quot;| Q
+    Q .-&gt; |&quot;encode(Str)&quot;|VV</code></pre>
+</section>
+
         </div>
         <div id="footer">
             <div class="flex-container" style="display:flex; justify-content: space-between;">

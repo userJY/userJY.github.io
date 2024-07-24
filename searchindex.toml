@@ -708,6 +708,8 @@ files = [
 
 {path = "posts/Hacksoft/2012-10-02-dotfile.md", url = "/posts/2012-10-02-dotfile.html", title = "dotfile"},
 
+{path = "posts/Hacksoft/2012-10-02-WIP_PGW.md", url = "/posts/2012-10-02-WIP_PGW.html", title = "WIP PGW api"},
+
 {path = "posts/Hacksoft/2012-10-02-Vim.md", url = "/posts/2012-10-02-Vim.html", title = "Vim"},
 
 {path = "posts/Hacksoft/2012-10-02-UpdateHakyllPost.md", url = "/posts/2012-10-02-UpdateHakyllPost.html", title = "Updating Hakyll posts"},

@@ -274,6 +274,8 @@ files = [
 
 {path = "posts/Javascript/2021-08-25-HttpTut.md", url = "/posts/2021-08-25-HttpTut.html", title = "HTTP TLS(SSL) Certificates"},
 
+{path = "posts/Javascript/2021-08-25-AndroidReactNative.md", url = "/posts/2021-08-25-AndroidReactNative.html", title = "React Native"},
+
 {path = "posts/AWS/2021-08-25-Alexa.md", url = "/posts/2021-08-25-Alexa.html", title = "Alexa"},
 
 {path = "posts/Misc/2021-08-10-PvNP.md", url = "/posts/2021-08-10-PvNP.html", title = "P = NP question"},

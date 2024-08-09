@@ -1379,6 +1379,40 @@ You do this since your cam uses 16MB flash which you checked in the intro.</p>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">fw_setenv</span> wlanpass YourNetworkPassword</span></code></pre></div>
 </section>
 </section>
+<section id="auto-config-wifi-by-dragging-file-to-root" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Auto config wifi by dragging file to root</h1>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /usr/bin</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> configure_wifi.sh</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x /usr/bin/configure_wifi.sh</span></code></pre></div>
+<div class="sourceCode" id="cb11" data-filename="configure_wifi.sh"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/sh</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="va">WIFI_CONFIG_FILE</span><span class="op">=</span><span class="st">&quot;/wifi.conf&quot;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="va">WPA_SUPPLICANT_CONF</span><span class="op">=</span><span class="st">&quot;/tmp/wpa_supplicant.conf&quot;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="ot">-f</span> <span class="st">&quot;</span><span class="va">$WIFI_CONFIG_FILE</span><span class="st">&quot;</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">.</span> <span class="st">&quot;</span><span class="va">$WIFI_CONFIG_FILE</span><span class="st">&quot;</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="ex">wpa_passphrase</span> <span class="st">&quot;</span><span class="va">$SSID</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="va">$PASSWORD</span><span class="st">&quot;</span> <span class="op">&gt;</span> <span class="st">&quot;</span><span class="va">$WPA_SUPPLICANT_CONF</span><span class="st">&quot;</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sed</span> <span class="at">-i</span> <span class="st">'s/#psk.*/scan_ssid=1/g'</span> <span class="st">&quot;</span><span class="va">$WPA_SUPPLICANT_CONF</span><span class="st">&quot;</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fallback to environment variables if the file does not exist</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="va">SSID</span><span class="op">=</span><span class="va">$(</span><span class="ex">fw_printenv</span> <span class="at">-n</span> wlanssid<span class="va">)</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="va">PASSWORD</span><span class="op">=</span><span class="va">$(</span><span class="ex">fw_printenv</span> <span class="at">-n</span> wlanpass<span class="va">)</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="ex">wpa_passphrase</span> <span class="st">&quot;</span><span class="va">$SSID</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="va">$PASSWORD</span><span class="st">&quot;</span> <span class="op">&gt;</span> <span class="st">&quot;</span><span class="va">$WPA_SUPPLICANT_CONF</span><span class="st">&quot;</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sed</span> <span class="at">-i</span> <span class="st">'s/#psk.*/scan_ssid=1/g'</span> <span class="st">&quot;</span><span class="va">$WPA_SUPPLICANT_CONF</span><span class="st">&quot;</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
+<div class="sourceCode" id="cb12" data-filename="wifi.conf"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="va">SSID</span><span class="op">=</span><span class="st">&quot;demo&quot;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="va">PASSWORD</span><span class="op">=</span><span class="st">&quot;demo&quot;</span></span></code></pre></div>
+<p>modify /etc/network/interfaces.d/wlan0</p>
+<div class="sourceCode" id="cb13" data-group="1a" data-glabel="new" data-filename="/etc/network/interfaces.d/wlan0"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">iface</span> wlan0 inet dhcp</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pre-up</span> /usr/bin/configure_wifi.sh</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pre-up</span> wpa_supplicant <span class="at">-B</span> <span class="at">-i</span> wlan0 <span class="at">-D</span> nl80211,wext <span class="at">-c</span> /tmp/wpa_supplicant.conf</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">post-down</span> killall <span class="at">-q</span> wpa_supplicant</span></code></pre></div>
+<div class="sourceCode" id="cb14" data-group="1a" data-glabel="old" data-filename="/etc/network/interfaces.d/wlan0"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">iface</span> wlan0 inet dhcp</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pre-up</span> wpa_passphrase <span class="st">&quot;</span><span class="va">$(</span><span class="ex">fw_printenv</span> <span class="at">-n</span> wlanssid<span class="va">)</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">fw_printenv</span> <span class="at">-n</span> wlanpass<span class="va">)</span><span class="st">&quot;</span> <span class="op">&gt;</span> /tmp/wpa_supplicant.conf</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pre-up</span> sed <span class="at">-i</span> <span class="st">'s/#psk.*/scan_ssid=1/g'</span> /tmp/wpa_supplicant.conf</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pre-up</span> wpa_supplicant <span class="at">-B</span> <span class="at">-i</span> wlan0 <span class="at">-D</span> nl80211,wext <span class="at">-c</span> /tmp/wpa_supplicant.conf</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">post-down</span> killall <span class="at">-q</span> wpa_supplicant</span></code></pre></div>
+</section>
 
         </div>
         <div id="footer">

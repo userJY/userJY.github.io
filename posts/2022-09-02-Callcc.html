@@ -246,6 +246,22 @@ Notice similarity to js except instead of nested, we can move it out into a then
 </ul></li>
 </ul>
 </section>
+<section id="eventhandlers-and-callback-functions" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Eventhandlers and Callback functions</h1>
+<ul>
+<li>Whenever you hear Evenhandler, think higher order function</li>
+<li>Whenever you hear Callback, think there must exist a higher order function that calls the Callback</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>event :: A</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>callback :: A <span class="op">-&gt;</span> B</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>Eventhandler :: (A <span class="op">-&gt;</span> B) <span class="op">-&gt;</span> A <span class="op">-&gt;</span> K</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Eventhandler(callback,event)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>{..callback(event)... }</span></code></pre></div>
+<ul>
+<li>Eventhandlers are higher order functions that take callbacks</li>
+</ul>
+</section>
 
         </div>
         <div id="footer">

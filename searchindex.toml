@@ -282,6 +282,8 @@ files = [
 
 {path = "posts/CodeEtc/2021-08-10-trace.md", url = "/posts/2021-08-10-trace.html", title = "Trace and Decorators reinvented in python"},
 
+{path = "posts/CodeEtc/2021-08-10-HAPROXY.md", url = "/posts/2021-08-10-HAPROXY.html", title = "HAPROXY"},
+
 {path = "posts/Mathematica/2021-04-04-VisualLogic.md", url = "/posts/2021-04-04-VisualLogic.html", title = "Mathematica - Visual Logic"},
 
 {path = "posts/Mathematica/2021-04-04-Part1math51.md", url = "/posts/2021-04-04-Part1math51.html", title = "Mathematica - intro Calc part 1"},
@@ -534,6 +536,10 @@ files = [
 
 {path = "posts/Economics/2015-07-01-Stochastic.md", url = "/posts/2015-07-01-Stochastic.html", title = "Stochastic calculus and brownian motion"},
 
+{path = "posts/Economics/2015-07-01-Quantopian2.md", url = "/posts/2015-07-01-Quantopian2.html", title = "Quant Porfolio Tactics"},
+
+{path = "posts/Economics/2015-07-01-Quantopian.md", url = "/posts/2015-07-01-Quantopian.html", title = "Quant Basic Statistics"},
+
 {path = "posts/Economics/2015-07-01-MarketConcepts.md", url = "/posts/2015-07-01-MarketConcepts.html", title = "Market Concepts"},
 
 {path = "posts/Economics/2015-07-01-LoadStockFRED.md", url = "/posts/2015-07-01-LoadStockFRED.html", title = "Import, load, FRED, TDtrade in python, R"},
@@ -688,15 +694,17 @@ files = [
 
 {path = "posts/Misc/2012-10-02-RandTips.md", url = "/posts/2012-10-02-RandTips.html", title = "Random Shortcuts"},
 
-{path = "posts/Misc/2012-10-02-Psychology.md", url = "/posts/2012-10-02-Psychology.html", title = "Transactional Psychology"},
+{path = "posts/Misc/2012-10-02-Psychology.md", url = "/posts/2012-10-02-Psychology.html", title = "Transactional Analysis"},
 
 {path = "posts/Misc/2012-10-02-PropertyLoans.md", url = "/posts/2012-10-02-PropertyLoans.html", title = "Property Loans"},
 
 {path = "posts/Misc/2012-10-02-Politics.md", url = "/posts/2012-10-02-Politics.html", title = "Economic Report"},
 
+{path = "posts/Misc/2012-10-02-Philosophy.md", url = "/posts/2012-10-02-Philosophy.html", title = "Philosophy"},
+
 {path = "posts/Misc/2012-10-02-MusicTheory.md", url = "/posts/2012-10-02-MusicTheory.html", title = "Music Theory"},
 
-{path = "posts/Misc/2012-10-02-Kant/2012-10-02-Kant.md", url = "/posts/2012-10-02-Kant.html", title = "Philosophy"},
+{path = "posts/Misc/2012-10-02-Kant/2012-10-02-Kant.md", url = "/posts/2012-10-02-Kant.html", title = "Kantian Philosophy"},
 
 {path = "posts/Misc/2012-10-02-House/2012-10-02-House.md", url = "/posts/2012-10-02-House.html", title = "Property Construction House"},
 

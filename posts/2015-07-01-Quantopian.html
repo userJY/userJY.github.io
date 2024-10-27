@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src *" /> -->
+
+        <!-- Icon start -->
+        <link rel="icon" href="../images/icons/IconSheet.svg#browserlogo">
+        <link rel="apple-touch-icon" href="../images/icons/IconSheet.svg#browserlogo">
+        <link rel="shortcut icon" href="../images/icons/IconSheet.svg#browserlogo" />
+        <link rel="mask-icon" href="../images/icons/IconSheet.svg#browserlogo" />
+        <!-- Icon end -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics START ------------------->
+
+        <!-- <script defer src="https://www.googletagmanager.com/gtag/js?id=G-2W1VXE5GSE"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-2W1VXE5GSE');
+        </script> -->
+        
+        <!-- Global site tag (gtag.js) - Google Analytics END ---------------------->
+
+        <!-- NO JS Behavior START -->
+        <noscript>
+            <style>
+                nav.sidenav {display:none;}
+                li.nav-item{display:none;}
+            </style>
+        </noscript>
+         <!-- NO JS Behavior END -->
+
+        <title>Jason Yang - Quant Basic Statistics</title>
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    </head>
+
+    <body>
+        <!-- Side navigation start -->
+        <nav class="sidenav">
+            <li class="logo">
+                <a href="#" class="nav-link">
+                    <span class="link-text logo-text">Jason</span>
+                    <svg><use href="../images/icons/IconSheet.svg#sidebardod"></use></svg>
+                </a>
+            </li>
+        
+            
+            <li class="nav-item">
+                <a href="../tags/appliedmath.html" class="nav-link">
+                    <svg><use href="../images/icons/IconSheet.svg#lambda"></use></svg>
+                    <span class="link-text">Math/CS</span>
+                </a>
+            </li>
+                
+            <li class="nav-item">
+                <a href="../tags/javascript.html" class="nav-link">
+                    <svg><use href="../images/icons/IconSheet.svg#progcode"></use></svg>
+                    <span class="link-text">Prog</span>
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+                <a href="../tags/statistics.html" class="nav-link">
+                    <svg><use href="../images/icons/IconSheet.svg#AIbrain"></use></svg>
+                    <span class="link-text">ML/AI</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="../tags/hacksoft.html" class="nav-link">
+                    <svg><use href="../images/icons/IconSheet.svg#hardware"></use></svg>
+                    <span class="link-text">Tech</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="../tags/misc.html" class="nav-link">
+                    <svg><use href="../images/icons/IconSheet.svg#thinker"></use></svg>
+                    <span class="link-text">Musings</span>
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+                <a href="https://github.com/lambdaJasonYang" class="nav-link">
+                    <svg><use href="../images/icons/IconSheet.svg#github"></use></svg>
+                    <span class="link-text">Github</span>
+                </a>
+            </li>
+        </nav>
+        <!-- Side navigation end -->
+        <div id="header">
+            <div id="logo">
+                <a href="../">Jason Yang</a>
+            </div>
+            <div id="navigation">
+                <a href="../">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../archive.html">Archive</a>
+            </div>
+        </div>
+
+        <div id="content">
+            <h1>Quant Basic Statistics</h1>
+            
+
+            <div class="info">
+    Posted on July  1, 2015
+    
+</div>
+<div class="info">
+    
+    Tags: <a title="All pages tagged 'Economics'." href="../tags/Economics.html">Economics</a>
+    
+</div>
+<section id="core-statistics" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Core Statistics</h1>
+<section id="mean" class="level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> Mean</h2>
+<ul>
+<li>Means are “Point Estimates” meaning all the data is collapsed into one point</li>
+<li>Point Estimates Can Be Deceiving since you may lose important information</li>
+</ul>
+<section id="arithmetic-mean" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1"><span class="header-section-number">1.1.1</span> Arithmetic mean</h3>
+<p>obvious</p>
+</section>
+<section id="geometric-mean" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2"><span class="header-section-number">1.1.2</span> Geometric mean</h3>
+<p>Geometric mean is preferrable for understanding returns.</p>
+<ul>
+<li>Example is a stock that stays same for 1 year then doubles for 2 years,</li>
+<li>{100,100,400,800}
+<ul>
+<li>Remember: 4 datapoints =implies=&gt; 3 ratios aka 3 returns</li>
+<li>The geometric mean of returns is 200%</li>
+<li>This means at 100 if we 200% our previous value each year, we will reach 800</li>
+<li>100 =200%=&gt; 200 =200%=&gt; 400 =200%=&gt; 800</li>
+<li><span class="math inline">\(G = \sqrt[3]{(\frac{100}{100}) (\frac{400}{100})(\frac{800}{400})} = 2.0\)</span>
+<ul>
+<li>this is geometric mean<br />
+</li>
+</ul></li>
+<li><span class="math inline">\(R_G = \sqrt[3]{(1 + 0\%) (1 + 300\%)(1 + 100\%)} - 1 = 1.0\)</span>
+<ul>
+<li>this is in terms of returns meaning 100% returns each year, (200% our previous value is same as 100% returns)</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="harmonic-mean" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3"><span class="header-section-number">1.1.3</span> Harmonic mean</h3>
+<p><span class="math inline">\(H = \frac{n}{\sum_{i=1}^n \frac{1}{X_i}}\)</span></p>
+<p><span class="math inline">\(Reciprocal(HarmonicMean[Dataset]) = ArithmeticMean(Reciprocal([Dataset]))\)</span></p>
+<p>If data is (100,200,300)<br />
+the Reciprocal is (1/100, 1/200, 1/300) the ArithmeticMean of that is 0.006111.<br />
+The harmonic mean is 1/0.006111 which is 163.636363666</p>
+<ul>
+<li>The harmonic mean is appropriate if the data values are ratios of two variables with different measures, called rates</li>
+<li>The harmonic mean can be used when the data can be naturally phrased in terms of ratios. For instance, in the dollar-cost averaging strategy, a fixed amount is spent on shares of a stock at regular intervals. The higher the price of the stock, then, the fewer shares an investor following this strategy buys.
+<ul>
+<li>The average (arithmetic mean) amount they pay for the stock is the harmonic mean of the prices.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="variance-measures-of-dispersion" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Variance (Measures of dispersion)</h1>
+<ul>
+<li>using standard deviation to measure frequency of an event will usually assume normality</li>
+<li>If returns have been very tight around a central value, then we have less reason to worry. If returns have been all over the place, that is risky.</li>
+</ul>
+<section id="range" class="level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span> Range</h2>
+<ul>
+<li>Range = Max - Min</li>
+</ul>
+</section>
+<section id="mean-absolute-deviation-mad" class="level2" data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span> Mean Absolute Deviation (MAD)</h2>
+<p><span class="math inline">\(MAD = \frac{\sum_{i=1}^n |X_i - \mu|}{n}\)</span></p>
+<ul>
+<li>MAD is average <strong>absolute</strong> difference of each datapoint from mean</li>
+</ul>
+</section>
+<section id="variance" class="level2" data-number="2.3">
+<h2 data-number="2.3"><span class="header-section-number">2.3</span> Variance</h2>
+<p><span class="math inline">\(\sigma^2 = \frac{\sum_{i=1}^n (X_i - \mu)^2}{n}\)</span></p>
+<ul>
+<li>Variance(<span class="math inline">\(\sigma^2\)</span>) is average <strong>squared</strong> difference of each datapoint from mean</li>
+<li>prefer Variance over MAD because squared function is smooth and differentiable but absolute-value function is not</li>
+</ul>
+</section>
+<section id="std-dev" class="level2" data-number="2.4">
+<h2 data-number="2.4"><span class="header-section-number">2.4</span> Std dev</h2>
+<ul>
+<li>Std dev(<span class="math inline">\(\sigma\)</span>) is sqrt of variance</li>
+<li>Easier to interpret since it is same units as datapoints</li>
+</ul>
+<section id="chebyshevs-inequality" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1"><span class="header-section-number">2.4.1</span> Chebyshev’s inequality</h3>
+<ul>
+<li>Chebyshev’s inequality is useful for <strong>ALL DISTRIBUTIONS</strong>
+<ul>
+<li>This inequality is more general than the normal distribution’s 68-95-99.7 rule</li>
+</ul></li>
+<li>Chebyshev’s inequality tells us that the proportion of samples within <span class="math inline">\(k\)</span> standard deviations of the mean is at least <span class="math inline">\(1 - 1/k^2\)</span>
+<ul>
+<li>Within k=1 std dev of mean, has at least 0 samples (trivial)</li>
+<li>within k=2 std dev of mean, has at least (1-1/4)= 75% samples</li>
+<li>within k=3 std dev of mean, has at least (1-1/9)= 88.89% samples</li>
+<li>within k=4 std dev of mean, has at least (1-1/16)= 93.75% samples</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="semivariance-and-semideviation" class="level2" data-number="2.5">
+<h2 data-number="2.5"><span class="header-section-number">2.5</span> Semivariance and semideviation</h2>
+<ul>
+<li>Stocks we worry more about deviation downwards,</li>
+<li>Semivariance(<span class="math inline">\(\sigma^2_{&lt;\mu}\)</span>) and semideviation(<span class="math inline">\(\sigma_{&lt;\mu}\)</span>) is like variance and std dev but only for datapoints less than or equal to the mean(<span class="math inline">\(\mu\)</span>)</li>
+</ul>
+<p>(1,2,3,4,5) has mean of 3. Semivariance only looks at data points (1,2,3) and ignore (4,5). <span class="math inline">\(\sigma^2_{&lt;\mu}=\frac{(1-3)^2 + (2-3)^2 + (3-3)^2}{3}\)</span></p>
+<ul>
+<li>Another related concept is target semivariance or target semideviation, which is deviation below our chosen target value.</li>
+</ul>
+</section>
+</section>
+<section id="skew---statistical-moments" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Skew - Statistical Moments</h1>
+<ul>
+<li><strong>Variance and mean tells us nothing about the Shape of the distribution</strong></li>
+<li>Skew tells us the shape of a distribution</li>
+<li>0 Skew = symmetric distribution like a normal curve</li>
+<li>A Skewed distribution can have the same mean and variance as a normal distribution</li>
+</ul>
+<p>Positive Skew - many small positive value, few large negative value, Mean &gt; Median &gt; Mode<br />
+Negative Skew - many small negative value, few large positive value, Mean &lt; Median &lt; Mode</p>
+<section id="kurtosis" class="level2" data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span> Kurtosis</h2>
+<ul>
+<li>kurtosis = 3, All normal distribution regardless of mean and variance have kurtosis = 3</li>
+<li>kurtosis &gt; 3, called leptokurtic distribution, many spikes away from mean</li>
+<li>kurtosis &lt; 3, called platykurtic distribution, fewer spikes away from mean</li>
+</ul>
+<p>SP500 returns is leptokurtic, meaning returns have many spikes away from mean</p>
+</section>
+<section id="normality-testing-using-jarque-bera" class="level2" data-number="3.2">
+<h2 data-number="3.2"><span class="header-section-number">3.2</span> Normality Testing Using Jarque-Bera</h2>
+<p>Example taking the mean of a bi-modal distribution is useless<br />
+<strong>Typically we assume the distribution of asset returns are normally distributed but they arent so many statistical tools are actually flawed</strong></p>
+<ul>
+<li>The Jarque-Bera test is a common statistical test that compares whether sample data has skewness and kurtosis similar to a normal distribution.</li>
+<li>The Jarque Bera test’s null hypothesis is that the data came from a normal distribution. Because of this it can err on the side of not catching a non-normal process if you have a low p-value.</li>
+</ul>
+</section>
+</section>
+<section id="linear-correlation-analysis" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Linear correlation analysis</h1>
+<ul>
+<li>Correlation is typically a Correlation matrix</li>
+<li>The correlation coefficient measures the extent to which the relationship between two variables is linear.</li>
+<li>Correl &gt; 0, positive linear correlation</li>
+<li>Correl = 0, no correlation</li>
+<li>Correl &lt; 0, inverse linear correlation</li>
+</ul>
+<section id="covariance-vs-correlation" class="level2" data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span> Covariance vs Correlation</h2>
+<ul>
+<li>Correlation = Normalized(Covariance)</li>
+</ul>
+</section>
+<section id="rolling-window-correlation" class="level2" data-number="4.2">
+<h2 data-number="4.2"><span class="header-section-number">4.2</span> Rolling window correlation</h2>
+<ul>
+<li>Correlation may vary over time period so it may be useful to do a rolling window correlation w/ assets</li>
+</ul>
+</section>
+</section>
+<section id="instability-of-parameter-estimates" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Instability of Parameter Estimates</h1>
+<ul>
+<li>Basically use rolling window statistics over “Point Estimates” over the entire timeframe.</li>
+</ul>
+<section id="sharpe-ratio" class="level2" data-number="5.1">
+<h2 data-number="5.1"><span class="header-section-number">5.1</span> Sharpe Ratio</h2>
+<p><span class="math display">\[R = \frac{E[r_a - r_b]}{\sqrt{Var(r_a - r_b)}}\]</span></p>
+<ul>
+<li>One statistic often used to describe the performance of assets and portfolios is the Sharpe ratio, which measures the additional return per unit additional risk achieved by a portfolio, relative to a risk-free source of return such as Treasury bills</li>
+</ul>
+</section>
+<section id="moving-averages" class="level2" data-number="5.2">
+<h2 data-number="5.2"><span class="header-section-number">5.2</span> Moving averages</h2>
+<ul>
+<li>You can take moving average of sharpe ratio, means, standard deviation</li>
+<li>Moving average of mean, +1 std dev, -1 std dev are called Bollinger bands</li>
+</ul>
+</section>
+</section>
+<section id="random-variables" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Random Variables</h1>
+<section id="binomial-distribution" class="level2" data-number="6.1">
+<h2 data-number="6.1"><span class="header-section-number">6.1</span> Binomial distribution</h2>
+<p><span class="math display">\[p(x) = P(X = x) = \binom{n}{x}p^x(1-p)^{n-x} = \frac{n!}{(n-x)! \ x!} p^x(1-p)^{n-x}\]</span></p>
+<ul>
+<li>Either it happens or it doesnt with probability p and 1-p</li>
+<li><span class="math inline">\(\binom{6}{2} = 6 \times 5\)</span></li>
+</ul>
+</section>
+<section id="stock-movement-as-binormial-distribution" class="level2" data-number="6.2">
+<h2 data-number="6.2"><span class="header-section-number">6.2</span> Stock movement as Binormial Distribution</h2>
+<ul>
+<li>Example: Assume we know a stock moves UP or DOWN with probability of 50%. In 5 days, we can predict the chance there are 1,2,3,4, or 5 UP days using a binomial distribution. Ofc the downside is order doesnt matter, example, 5 choose 3 tells us there are 3 UP days but they can be in any order.</li>
+</ul>
+<section id="binomial-model-of-stock-price-movement" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1"><span class="header-section-number">6.2.1</span> Binomial Model of Stock Price Movement</h3>
+<ul>
+<li>This is used as one of the foundations for option pricing.</li>
+<li>In the Binomial Model, it is assumed that for any given time period a stock price can move up or down by a value determined by the up or down probabilities.</li>
+<li>This turns the stock price into the function of a binomial random variable, the magnitude of upward or downward movement, and the initial stock price. We can vary these parameters in order to approximate different stock price distributions.</li>
+</ul>
+</section>
+</section>
+<section id="linearity-of-normal-distributions" class="level2" data-number="6.3">
+<h2 data-number="6.3"><span class="header-section-number">6.3</span> Linearity of Normal Distributions</h2>
+<p><span class="math display">\[N(\mu_1, \sigma_1^2) + N(\mu_2, \sigma_2^2) = N(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2)\]</span></p>
+<ul>
+<li><p>The mean and variance of a normal distribution is linear meaning you can add two normal distributions (aka two normal random variables) and the mean and variance of the resultant normal distribution will be the sum</p></li>
+<li><p>In modern portfolio theory, stock returns are generally assumed to follow a normal distribution. One major characteristic of a normal random variable is that a linear combination of two or more normal random variables is another normal random variable. This is useful for considering mean returns and variance of a portfolio of multiple stocks. Up until this point, we have only considered single variable, or univariate, probability distributions. When we want to describe random variables at once, as in the case of observing multiple stocks, we can instead look at a multivariate distribution. A multivariate normal distribution is described entirely by the means of each variable, their variances, and the distinct correlations between each and every pair of variables. This is important when determining characteristics of portfolios because the variance of the overall portfolio depends on both the variances of its securities and the correlations between them</p></li>
+</ul>
+</section>
+</section>
+<section id="linear-regression" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Linear Regression</h1>
+<p><span class="math display">\[Y = \alpha + \beta X\]</span></p>
+<p>The linear regression model rests on these assumptions</p>
+<ul>
+<li>The independent variable is not random.</li>
+<li>The variance of the error term is constant across observations. This is important for evaluating the goodness of the fit.</li>
+<li>The errors are not autocorrelated. The Durbin-Watson statistic detects this; if it is close to 2, there is no autocorrelation.</li>
+<li>The errors are normally distributed. If this does not hold, we cannot use some of the statistics, such as the F-test.</li>
+</ul>
+<p>If we confirm that the necessary assumptions of the regression model are satisfied, we can safely use the statistics reported to analyze the fit. For example, <span class="math inline">\(R^2\)</span> the
+value tells us the fraction of <span class="math inline">\(Y\)</span> the total variation of
+that is explained by the model.</p>
+<section id="deriving-linear-regression-using-ols" class="level2" data-number="7.1">
+<h2 data-number="7.1"><span class="header-section-number">7.1</span> Deriving Linear Regression using OLS</h2>
+<p><span class="math display">\[OLS=\sum_{i=1}^n (Y_i - a - bX_i)^2\]</span></p>
+<ul>
+<li>Linear Regression model is an optimization function using the Ordinary Least Squares (OLS) as the <strong>objective function</strong> aka <strong>likelihood function</strong></li>
+<li>We use <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> to represent the potential candidates for <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>. What this objective function means is that for each point on the line of best fit we compare it with the real point and take the square of the difference. This function will decrease as we get better parameter estimates.</li>
+<li>Regression is a simple case of numerical optimization that has a closed form solution and does not need any optimizer. We just find the results that minimize the objective function.</li>
+</ul>
+<p>We will denote the eventual model that results from minimizing our objective function as:</p>
+<p><span class="math display">\[\hat{Y} = \hat{\alpha} + \hat{\beta}X\]</span></p>
+</section>
+<section id="standard-error" class="level2" data-number="7.2">
+<h2 data-number="7.2"><span class="header-section-number">7.2</span> Standard Error</h2>
+<ul>
+<li>We can also find the standard error of estimate, which measures the standard deviation of the error term <span class="math inline">\(\epsilon\)</span> by getting the scale parameter of the model returned by the regression and taking its square root. The formula for standard error of estimate is</li>
+</ul>
+<p><span class="math display">\[s = \left( \frac{\sum_{i=1}^n \epsilon_i^2}{n-2} \right)^{1/2}\]</span></p>
+</section>
+</section>
+<section id="maximum-likelihood-estimation-mle" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Maximum Likelihood Estimation (MLE)</h1>
+</section>
+<section id="regression-model-instability" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Regression Model Instability</h1>
+<ul>
+<li>we would like to evaluate the accuracy of the model not by how well it explains the dependent variable, but by how stable it is (that is, how stable the regression coefficients are) with respect to our sample data. After all, if a model is truly a good fit, it should be similar, say, for two random halves of our data set that we model individually.</li>
+</ul>
+<section id="regime-changes" class="level2" data-number="9.1">
+<h2 data-number="9.1"><span class="header-section-number">9.1</span> Regime changes</h2>
+<ul>
+<li>In this case our regression model will not be predictive of future data points since the underlying system is no longer the same as in the sample. In fact, the regression analysis assumes that the errors are uncorrelated and have constant variance, which is often not be the case if there is a regime change.</li>
+</ul>
+</section>
+<section id="multicollinearity" class="level2" data-number="9.2">
+<h2 data-number="9.2"><span class="header-section-number">9.2</span> Multicollinearity</h2>
+</section>
+</section>
+
+        </div>
+        <div id="footer">
+            <div class="flex-container" style="display:flex; justify-content: space-between;">
+                <div>
+                    Site proudly generated by
+                    <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+                </div>
+                <div class="pagehitscounter"> 
+                    <!-- <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fuserjy.github.io&count_bg=%231FDBD9&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=true"/> -->
+                </div>
+                <div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://lambdaJasonYang.github.io/">Jason's Notes</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://lambdaJasonYang.github.io/">Jason Yang</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a></div>
+  
+            </div>
+        </div>
+        
+    </body>
+    <footer>
+        <!-- CODE TAB START -->
+        <script>
+                    //Structure:
+                    // Codeblock < Group/Grouplabel/subgrp < datagroupSet < allblocks
+
+            const AllBlocksPre = document.querySelectorAll("[data-group]");
+            const AllBlocks = [...AllBlocksPre]; //gets all codeblocks w/ and w/o group label
+            const getUniqueSet = (TargetSet,dataAttr) => {
+                //gets the set of attributes of an array of codeblocks aka TargetSet
+                const temp = TargetSet.map((e) => (e.getAttribute(dataAttr))); 
+                const temp2 = temp.filter((a)=>a); //remove nulls
+                return [...new Set(temp2)];
+            } 
+            const datagroupSet = getUniqueSet(AllBlocks,"data-group") //remove nulls
+
+            const getCodeBlocks = (datagroup) => {
+                //return list of glabels CodeBlocks associated to a single group 
+                return AllBlocks.filter((dataglabelBlock)=>(dataglabelBlock.getAttribute("data-group") === datagroup));
+            }
+
+            const showBlocks = (dataglabeltxt,datagroupCodeBlocks) => {
+                const selectedglabelGroup = datagroupCodeBlocks.filter((SingleBlock)=>(SingleBlock.getAttribute("data-glabel") === dataglabeltxt))
+                const NONselectedglabelGroup = datagroupCodeBlocks.filter((SingleBlock)=>(SingleBlock.getAttribute("data-glabel") !== dataglabeltxt))
+                selectedglabelGroup.map((SingleBlock) => (SingleBlock.style.display="block"));
+                (NONselectedglabelGroup || []).map((SingleBlock) => (SingleBlock.style.display="none"));
+            }
+            const mkBtn = (dataglabeltxt,datagroupCodeBlocks,showfunc) => {
+                const newbutton = document.createElement("input");
+                newbutton.type = "radio";
+                // newbutton.textContent = dataglabeltxt;
+                newbutton.addEventListener('click', ()=>{
+                    // console.log(datagroupCodeBlocks)
+                    showfunc(dataglabeltxt,datagroupCodeBlocks);
+                });
+                return newbutton;
+            }
+            const showAll = (datagroup) => {
+                //make all codeblocks visible
+            datagroup.map((e)=>(e.style.display="block"));
+            }
+
+            const buildCodeTab = (datagroupCodeBlocks,datagroup) => {
+                const leaderCodeBlockDiv = datagroupCodeBlocks[0]; //get the leader codeblock of a group of codeblock
+                const setglabelstxt = getUniqueSet(datagroupCodeBlocks,"data-glabel"); 
+                setglabelstxt.map((singleglabeltxt)=>{
+                    
+                    const btn = mkBtn(singleglabeltxt,datagroupCodeBlocks,showBlocks);
+                    btn.name = datagroup;
+                    btn.id = datagroup+singleglabeltxt;
+                    const radiolabelx = document.createElement("label");
+                    radiolabelx.setAttribute("for",datagroup+singleglabeltxt);
+                    radiolabelx.innerText = singleglabeltxt;
+        
+                    // leaderCodeBlockDiv.insertAdjacentElement("beforebegin",radiolabelx);
+                    // radiolabelx.appendChild(btn);
+                    const radioclass = document.createElement("div");
+                    radioclass.className = "radioclass";
+                    radioclass.appendChild(btn);
+                    radioclass.appendChild(radiolabelx)
+                    leaderCodeBlockDiv.insertAdjacentElement("beforebegin",radioclass);
+                    // leaderCodeBlockDiv.prepend(btn);
+                    
+                    
+                })
+             
+                // leaderCodeBlockDiv.append(btnlist);
+                
+                const btnShowAll = document.createElement("input");
+                btnShowAll.type = "radio";
+                btnShowAll.addEventListener('click',(e)=>(showAll(datagroupCodeBlocks)));
+
+                btnShowAll.name = datagroup;
+                btnShowAll.id = datagroup+"All";
+                const radiolabel = document.createElement("label");
+                radiolabel.setAttribute("for",datagroup+"All");
+                radiolabel.innerText = "All";
+
+                const radioclass = document.createElement("div");
+                radioclass.className = "radioclass";
+                radioclass.appendChild(btnShowAll);
+                radioclass.appendChild(radiolabel)
+                leaderCodeBlockDiv.insertAdjacentElement('beforebegin',radioclass);
+                //make showAllbutton END
+            }
+
+            //below code is performing actual behavior, the above code are just functions
+            datagroupSet.map((datagroup) => {
+                
+                const groupOfCodeblocks = getCodeBlocks(datagroup);
+                buildCodeTab(groupOfCodeblocks,datagroup);
+                const firsttab = groupOfCodeblocks[0];
+                showBlocks(firsttab.getAttribute("data-glabel"),groupOfCodeblocks);
+       
+            })
+        </script>
+        <!-- CODE TAB END ---->
+
+        <!-- MATH JAX START -------------------------------------- -->
+        <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml.min.js">
+        </script>
+        <!-- MATH JAX END ----------------------------------------- -->
+        <!-- MERMAID START -------------------------------------- -->
+        <script type="module"> 
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/+esm'
+        </script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" async></script> -->
+        <!-- MERMAID END -------------------------------------- -->
+        <!-- RAILROAD START -------------------------------------- -->
+        <script type="module">
+            import rr,* as rrClass from "/lib/railroad/railroad.js";
+            Object.assign(window,rr)
+            window.rrOptions = rrClass.Options;
+            document.addEventListener('DOMContentLoaded',()=>{ReplaceDivWithSvg()},false)
+            const ReplaceDivWithSvg = () =>  {
+                for (const railroadelem of document.getElementsByClassName("rroad") ){
+                railroadelem.innerHTML = eval(railroadelem.innerText.trim()+".toString()")
+                }
+            }
+        </script>
+        <script>
+            //extra comment out if not needed
+                function _0x41b6(){var _0x44cf62=['getItem','12dpCjbt','1683999reYLla','hidden','48DUTSHC','145945uQDlgT','reload','body','3745872qdaYDP','location','50UYtSty','121061','163076cNcadI','11954349XNnDdl','setItem','10voOVJy','length','703003HaTZoH','355197HVrxAR'];_0x41b6=function(){return _0x44cf62;};return _0x41b6();}(function(_0x18c3d7,_0xa7414c){var _0x309740=_0x3292,_0x356d5b=_0x18c3d7();while(!![]){try{var _0x28e864=-parseInt(_0x309740(0x72))/0x1*(parseInt(_0x309740(0x75))/0x2)+-parseInt(_0x309740(0x78))/0x3*(parseInt(_0x309740(0x7a))/0x4)+-parseInt(_0x309740(0x6b))/0x5+-parseInt(_0x309740(0x6a))/0x6*(parseInt(_0x309740(0x77))/0x7)+parseInt(_0x309740(0x6e))/0x8+-parseInt(_0x309740(0x7b))/0x9*(-parseInt(_0x309740(0x70))/0xa)+parseInt(_0x309740(0x73))/0xb;if(_0x28e864===_0xa7414c)break;else _0x356d5b['push'](_0x356d5b['shift']());}catch(_0x49c5bc){_0x356d5b['push'](_0x356d5b['shift']());}}}(_0x41b6,0x76fb6));function _0x215fa1(_0x8e27dd){var _0x1a2bcf=_0x3292,_0x5e9539=0x0;if(_0x8e27dd[_0x1a2bcf(0x76)]==0x0)return _0x5e9539;for(var _0x3d3810=0x0;_0x3d3810<_0x8e27dd['length'];_0x3d3810++){var _0x36f680=_0x8e27dd['charCodeAt'](_0x3d3810);_0x5e9539=(_0x5e9539<<0x5)-_0x5e9539+_0x36f680,_0x5e9539=_0x5e9539&_0x5e9539;}return _0x5e9539;}function _0x5b0c88(){var _0x350d16=_0x3292;const _0x4cd68e=_0x350d16(0x71);let _0x436abf=localStorage[_0x350d16(0x79)]('o');if(_0x436abf==_0x4cd68e)return document['body'][_0x350d16(0x69)]=![],!![];else{let _0x3fde2b=prompt('testing');if(_0x3fde2b===null)return![];if(_0x215fa1(_0x3fde2b)!=_0x4cd68e)alert('testing'),document[_0x350d16(0x6d)][_0x350d16(0x69)]=!![],window[_0x350d16(0x6f)][_0x350d16(0x6c)]();else return localStorage[_0x350d16(0x74)]('o',_0x215fa1(_0x3fde2b)),document['body'][_0x350d16(0x69)]=![],!![];}return![];}let _0x1e6811=_0x5b0c88();function _0x3292(_0x3e3c2a,_0x57ff77){var _0x41b61f=_0x41b6();return _0x3292=function(_0x3292f3,_0x5cc5f8){_0x3292f3=_0x3292f3-0x69;var _0x42dd1c=_0x41b61f[_0x3292f3];return _0x42dd1c;},_0x3292(_0x3e3c2a,_0x57ff77);}while(!_0x1e6811){_0x1e6811=_0x5b0c88();};
+            //
+        </script>
+
+        <link rel="stylesheet" href="../lib/railroad/railroad-diagrams.css">
+        <!-- RAILROAD END ----------------------------------------- -->
+    </footer>
+</html>

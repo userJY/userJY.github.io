@@ -37,7 +37,7 @@
         </noscript>
          <!-- NO JS Behavior END -->
 
-        <title>Jason Yang - BioChem 2</title>
+        <title>Jason Yang - HAPROXY</title>
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
     </head>
 
@@ -110,53 +110,64 @@
         </div>
 
         <div id="content">
-            <h1>BioChem 2</h1>
+            <h1>HAPROXY</h1>
             
 
             <div class="info">
-    Posted on January  1, 2016
+    Posted on August 10, 2021
     
 </div>
 <div class="info">
     
-    Tags: <a title="All pages tagged 'biochem'." href="../tags/biochem.html">biochem</a>
+    Tags: <a title="All pages tagged 'codeetc'." href="../tags/codeetc.html">codeetc</a>
     
 </div>
-<div id="TOC"><ul>
-<li><a href="#terms"><span class="toc-section-number">1</span> Terms</a></li>
-<li><a href="#problem-sets"><span class="toc-section-number">2</span> Problem Sets</a>
+<section id="prereq" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> PREREQ</h1>
 <ul>
-<li><a href="#q1"><span class="toc-section-number">2.1</span> Q1</a></li>
-<li><a href="#a1"><span class="toc-section-number">2.2</span> A1</a></li>
+<li>go to https://github.com/PCRE2Project/pcre2/releases
+<ul>
+<li>install the tar.gz file</li>
 </ul></li>
-</ul></div>
-<section id="terms" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Terms</h1>
-<ul>
-<li>Catalytically perfect enzyme</li>
-<li>Oxyanion hole</li>
-<li>N-linked glycan</li>
-<li>PKA : Protein Kinase A which has 2 regulatory dimers and 2 catalytic dymers. It phosphorylates the substrate</li>
-<li>Antiporter : A secondary transporter that uses the gradient of one molecule to transform another type of molecule in the opposite direction.</li>
 </ul>
-<p>The phillips mechanism for lysozyme postulates that 2 side chains play an essential role in the catalytic mechanism. In the enzyme isolated from hen egg white Glu35 and Asp52 are the 2 active side chains.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.44/pcre2-10.44.tar.gz</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xzf</span> pcre2-10.44.tar.gz</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> pcre2-10.44</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">./configure</span> <span class="at">--enable-jit</span><span class="op">=</span>auto</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> make install</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install lua5.4</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install liblua5.4-dev</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install libssl-dev</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> clean</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> <span class="at">-j</span> <span class="va">$(</span><span class="ex">nproc</span><span class="va">)</span> TARGET=linux-glibc USE_OPENSSL=1 USE_QUIC=1 USE_QUIC_OPENSSL_COMPAT=1 USE_LUA=1 USE_PCRE2_JIT=1 LUA_LIB_NAME=lua5.4</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> make install</span></code></pre></div>
 </section>
-<section id="problem-sets" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Problem Sets</h1>
-<section id="q1" class="level2" data-number="2.1">
-<h2 data-number="2.1"><span class="header-section-number">2.1</span> Q1</h2>
-<p>Protein A has a binding site for ligand X with a K_d of 10^-6 M. Protein B has a binding site for ligand X with a K_d of 10^-9 M. Which protein has a higher affinity for ligand X? Explain your reasoning.</p>
-</section>
-<section id="a1" class="level2" data-number="2.2">
-<h2 data-number="2.2"><span class="header-section-number">2.2</span> A1</h2>
-<p>Protein B has a higher affinity for ligand X compared to Protein A.</p>
-<p>The dissociation constant ((K_d)) is inversely related to the affinity of a protein for its ligand. A lower (K_d) value indicates that the protein binds more tightly to the ligand, meaning the complex is more stable and less likely to dissociate.</p>
-<ul>
-<li>Protein A has a (K_d) of (10^{-6}) M, which means it requires a higher concentration of ligand X to achieve half-maximal binding.</li>
-<li>Protein B has a (K_d) of (10^{-9}) M, indicating that it can achieve half-maximal binding at a much lower ligand concentration.</li>
-</ul>
-<p>Therefore, Protein B binds more tightly (with higher affinity) to ligand X than Protein A does.</p>
-</section>
+<section id="usage" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> USAGE</h1>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">haproxy</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /etc/haproxy/haproxy.cfg</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simple configuration for an HTTP proxy listening on port 80 on all</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># interfaces and forwarding requests to a single backend &quot;servers&quot; with a</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># single server &quot;server1&quot; listening on 127.0.0.1:8000</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="at">global</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="at">    daemon</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="at">    maxconn 256</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="at">defaults</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="at">    mode http</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="at">    timeout connect 5000ms</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="at">    timeout client 50000ms</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="at">    timeout server 50000ms</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="at">frontend http-in</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="at">    bind *:80</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="at">    default_backend servers</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="at">backend servers</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="at">    server server1 127.0.0.1:8000 maxconn 32</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> http.server 8000 <span class="at">--bind</span> 127.0.0.1</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> haproxy <span class="at">-f</span> configuration.conf <span class="at">-c</span></span></code></pre></div>
 </section>
 
         </div>

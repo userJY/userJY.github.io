@@ -86,6 +86,8 @@ files = [
 
 {path = "posts/CodeEtc/2022-09-02-CPython.md", url = "/posts/2022-09-02-CPython.html", title = "Everything is a pointer perspective"},
 
+{path = "posts/CodeEtc/2022-09-02-AndroidJetpack.md", url = "/posts/2022-09-02-AndroidJetpack.html", title = "Android Jetpack"},
+
 {path = "posts/C/2022-09-02-makefile.md", url = "/posts/2022-09-02-makefile.html", title = "makefile"},
 
 {path = "posts/Algorithms/2022-09-02-NQueen.md", url = "/posts/2022-09-02-NQueen.html", title = "NQueen in Haskell"},
@@ -155,6 +157,8 @@ files = [
 {path = "posts/Cloudflare/2022-01-01-workers.md", url = "/posts/2022-01-01-workers.html", title = "Cloudflare"},
 
 {path = "posts/Cloudflare/2022-01-01-DNSR2.md", url = "/posts/2022-01-01-DNSR2.html", title = "Cloudflare R2"},
+
+{path = "posts/Misc/2021-11-15-Taxes.md", url = "/posts/2021-11-15-Taxes.html", title = "Understanding Google Analytics"},
 
 {path = "posts/Misc/2021-11-15-GoogleAnalytics.md", url = "/posts/2021-11-15-GoogleAnalytics.html", title = "Understanding Google Analytics"},
 
@@ -528,8 +532,6 @@ files = [
 
 {path = "posts/Economics/2015-07-01-thinkScript.md", url = "/posts/2015-07-01-thinkScript.html", title = "Thinkscript"},
 
-{path = "posts/Economics/2015-07-01-TradingMeasurement.md", url = "/posts/2015-07-01-TradingMeasurement.html", title = "Benchmarks for algotrading"},
-
 {path = "posts/Economics/2015-07-01-StockOptionsNotes.md", url = "/posts/2015-07-01-StockOptionsNotes.html", title = "Options Derivatives Notes"},
 
 {path = "posts/Economics/2015-07-01-StockIndicators.md", url = "/posts/2015-07-01-StockIndicators.html", title = "Trading Indicators"},
@@ -555,6 +557,8 @@ files = [
 {path = "posts/Economics/2015-07-01-ExamP.md", url = "/posts/2015-07-01-ExamP.html", title = "Exam P"},
 
 {path = "posts/Economics/2015-07-01-ExamIFM.md", url = "/posts/2015-07-01-ExamIFM.html", title = "Exam IFM"},
+
+{path = "posts/Economics/2015-07-01-Edgar.md", url = "/posts/2015-07-01-Edgar.html", title = "Edgar"},
 
 {path = "posts/Economics/2015-07-01-EconSignals.md", url = "/posts/2015-07-01-EconSignals.html", title = "Econ terms"},
 
@@ -658,9 +662,9 @@ files = [
 
 {path = "posts/OtherMath/2014-05-01-BuildNatSets.md", url = "/posts/2014-05-01-BuildNatSets.html", title = "Building Natural numbers from Sets with python"},
 
-{path = "posts/AppliedMath/2013-04-01-Z3.md", url = "/posts/2013-04-01-Z3.html", title = "Z3"},
+{path = "posts/LinearAlgebra/2013-04-01-SVD.md", url = "/posts/2013-04-01-SVD.html", title = "SVD"},
 
-{path = "posts/AppliedMath/2013-04-01-SVD.md", url = "/posts/2013-04-01-SVD.html", title = "SVD"},
+{path = "posts/AppliedMath/2013-04-01-Z3.md", url = "/posts/2013-04-01-Z3.html", title = "Z3"},
 
 {path = "posts/AppliedMath/2013-04-01-MarkovChain.md", url = "/posts/2013-04-01-MarkovChain.html", title = "Markov Chain and State machines"},
 
@@ -711,6 +715,8 @@ files = [
 {path = "posts/Misc/2012-10-02-HomeWiringMistake.md", url = "/posts/2012-10-02-HomeWiringMistake.html", title = "Home Wiring Rookie mistake"},
 
 {path = "posts/Misc/2012-10-02-HVAC.md", url = "/posts/2012-10-02-HVAC.html", title = "HVAC"},
+
+{path = "posts/Misc/2012-10-02-Cruise.md", url = "/posts/2012-10-02-Cruise.html", title = "Cruise"},
 
 {path = "posts/Misc/2012-10-02-Bread.md", url = "/posts/2012-10-02-Bread.html", title = "Panasonic SD-MDX102-K Breadmaker Translated"},
 

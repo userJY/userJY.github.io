@@ -308,6 +308,13 @@
   </url>
 
   <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-AndroidJetpack.html</loc>
+    <lastmod>September  2, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://lambdaJasonYang.github.io/posts/2022-09-02-makefile.html</loc>
     <lastmod>September  2, 2022</lastmod>
     <changefreq>weekly</changefreq>
@@ -548,6 +555,13 @@
   <url>
     <loc>https://lambdaJasonYang.github.io/posts/2022-01-01-DNSR2.html</loc>
     <lastmod>January  1, 2022</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2021-11-15-Taxes.html</loc>
+    <lastmod>November 15, 2021</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1855,13 +1869,6 @@
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2015-07-01-TradingMeasurement.html</loc>
-    <lastmod>July  1, 2015</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://lambdaJasonYang.github.io/posts/2015-07-01-StockOptionsNotes.html</loc>
     <lastmod>July  1, 2015</lastmod>
     <changefreq>weekly</changefreq>
@@ -1947,6 +1954,13 @@
 
   <url>
     <loc>https://lambdaJasonYang.github.io/posts/2015-07-01-ExamIFM.html</loc>
+    <lastmod>July  1, 2015</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2015-07-01-Edgar.html</loc>
     <lastmod>July  1, 2015</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -2310,14 +2324,14 @@
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2013-04-01-Z3.html</loc>
+    <loc>https://lambdaJasonYang.github.io/posts/2013-04-01-SVD.html</loc>
     <lastmod>April  1, 2013</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://lambdaJasonYang.github.io/posts/2013-04-01-SVD.html</loc>
+    <loc>https://lambdaJasonYang.github.io/posts/2013-04-01-Z3.html</loc>
     <lastmod>April  1, 2013</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -2493,6 +2507,13 @@
 
   <url>
     <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-HVAC.html</loc>
+    <lastmod>October  2, 2012</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lambdaJasonYang.github.io/posts/2012-10-02-Cruise.html</loc>
     <lastmod>October  2, 2012</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
